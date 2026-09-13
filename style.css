@@ -140,7 +140,7 @@ body {
 }
 
 
-/* CONTACT BUTTON */
+/* CONTACT BUTTONS */
 
 .contact-button {
     display: inline-block;
@@ -156,6 +156,14 @@ body {
     font-size: 12px;
 
     letter-spacing: 0.08em;
+}
+
+.contact-links {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
 }
 
 
@@ -218,7 +226,9 @@ section {
     margin: 0 0 8px;
 
     font-size: 32px;
+
     line-height: 1.05;
+
     letter-spacing: 0.08em;
 }
 
