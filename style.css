@@ -2,22 +2,20 @@
    MUSIC PORTFOLIO
    MAIN STYLE SHEET
 
-   This file controls:
+   Controls:
    - Colours
    - Fonts
-   - Sizes
+   - Text sizes
    - Spacing
    - Layout
+   - Images
    - Borders
    - Mobile design
-
 ========================================================= */
 
 
 /* =========================================================
    DESIGN CONTROL PANEL
-
-   MOST OF YOUR DESIGN CHANGES CAN BE MADE HERE.
 ========================================================= */
 
 :root {
@@ -31,7 +29,7 @@
     --black: #000000;
 
 
-    /* DEFAULT WEBSITE COLOURS */
+    /* DEFAULT WEBSITE */
 
     --site-background: #101C36;
     --site-text: #FFFFFF;
@@ -41,12 +39,8 @@
     /* =====================================================
        SECTION COLOURS
 
-       FOR NOW, ALL SECTIONS ARE NAVY + WHITE.
-
-       CHANGE THESE LATER TO GIVE EACH SECTION
-       ITS OWN COLOUR.
+       CHANGE THESE LATER TO MAKE EACH SECTION DIFFERENT.
     ===================================================== */
-
 
     /* ABOUT */
 
@@ -62,7 +56,7 @@
     --highlight-accent: #FFFFFF;
 
 
-    /* PROFESSIONAL PROJECT */
+    /* PROFESSIONAL */
 
     --professional-background: #101C36;
     --professional-text: #FFFFFF;
@@ -98,25 +92,27 @@
        TEXT SIZES
     ===================================================== */
 
-    --body-size: 18px;
+    --body-size: 17px;
 
-    --heading-size: 70px;
+    --heading-size: 64px;
 
-    --section-title-size: 45px;
+    --section-title-size: 42px;
 
-    --song-title-size: 28px;
+    --song-title-size: 25px;
 
 
 
     /* =====================================================
        SPACING
+
+       These have been reduced so more fits on screen.
     ===================================================== */
 
-    --section-padding: 100px;
+    --section-padding: 65px;
 
     --content-width: 1100px;
 
-    --column-gap: 60px;
+    --column-gap: 50px;
 
 
 
@@ -132,8 +128,6 @@
 
 /* =========================================================
    BASIC RESET
-
-   Removes some default browser spacing.
 ========================================================= */
 
 * {
@@ -144,8 +138,6 @@
 
 /* =========================================================
    BODY
-
-   Controls the entire website.
 ========================================================= */
 
 body {
@@ -162,7 +154,7 @@ body {
 
     font-size: var(--body-size);
 
-    line-height: 1.5;
+    line-height: 1.45;
 
 }
 
@@ -171,30 +163,21 @@ body {
 /* =========================================================
    ALL SECTIONS
 
-   Every section fills at least the height of the screen.
+   Reduced padding means less empty space between sections.
 ========================================================= */
 
 section {
 
-    min-height: 100vh;
+    min-height: auto;
 
     padding: var(--section-padding) 30px;
-
-    box-sizing: border-box;
 
 }
 
 
 
 /* =========================================================
-   SECTION CONTAINER
-
-   THIS is what keeps the content centered.
-
-   max-width prevents the website from stretching
-   across an enormous screen.
-
-   margin: 0 auto centers it.
+   CENTERED SECTION CONTAINER
 ========================================================= */
 
 .section-container {
@@ -211,16 +194,11 @@ section {
 
 /* =========================================================
    SECTION NUMBERS
-
-   Example:
-   01
-   02
-   03
 ========================================================= */
 
 .section-number {
 
-    margin: 0 0 10px 0;
+    margin: 0 0 6px 0;
 
     font-family: var(--heading-font);
 
@@ -234,24 +212,19 @@ section {
 
 /* =========================================================
    SECTION TITLES
-
-   Example:
-   HIGHLIGHT
-   ORCHESTRAL
-   EXPERIMENTAL
 ========================================================= */
 
 .section-title {
 
     width: 100%;
 
-    margin: 0 auto 25px auto;
+    margin: 0 auto 15px auto;
 
     font-family: var(--heading-font);
 
     font-size: var(--section-title-size);
 
-    line-height: 1.1;
+    line-height: 1.05;
 
     text-align: center;
 
@@ -260,14 +233,14 @@ section {
 
 
 /* =========================================================
-   SECTION INTRODUCTION
+   SECTION INTRO
 ========================================================= */
 
 .section-intro {
 
     max-width: 700px;
 
-    margin: 0 auto 50px auto;
+    margin: 0 auto 30px auto;
 
     text-align: center;
 
@@ -289,8 +262,6 @@ section {
 
 
 
-/* About content */
-
 .about-container {
 
     width: 100%;
@@ -307,13 +278,13 @@ section {
 
     align-items: center;
 
-    min-height: calc(100vh - 200px);
+    min-height: 75vh;
 
 }
 
 
 
-/* About image */
+/* Profile image */
 
 .about-image {
 
@@ -323,13 +294,11 @@ section {
 
 
 
-/* Profile image */
-
 .about-image img {
 
     width: 100%;
 
-    max-width: 550px;
+    max-width: 500px;
 
     height: auto;
 
@@ -347,7 +316,7 @@ section {
 
 .about-info h1 {
 
-    margin: 0 0 10px 0;
+    margin: 0 0 8px 0;
 
     font-family: var(--heading-font);
 
@@ -363,11 +332,11 @@ section {
 
 .about-info h2 {
 
-    margin: 0 0 30px 0;
+    margin: 0 0 20px 0;
 
     font-family: var(--heading-font);
 
-    font-size: 22px;
+    font-size: 20px;
 
     font-weight: normal;
 
@@ -381,7 +350,7 @@ section {
 
     max-width: 650px;
 
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 
 }
 
@@ -393,7 +362,7 @@ section {
 
     display: inline-block;
 
-    padding: 12px 25px;
+    padding: 10px 22px;
 
     border: var(--border-width) solid var(--about-border);
 
@@ -409,8 +378,6 @@ section {
 
 
 
-/* Contact button hover */
-
 .contact-button:hover {
 
     background: var(--about-text);
@@ -423,11 +390,7 @@ section {
 
 /* =========================================================
    SECTIONS 2 + 3
-   HIGHLIGHT / PROFESSIONAL PROJECT
 ========================================================= */
-
-
-/* Highlight */
 
 .highlight-section {
 
@@ -439,8 +402,6 @@ section {
 
 
 
-/* Professional */
-
 .professional-section {
 
     background: var(--professional-background);
@@ -451,7 +412,7 @@ section {
 
 
 
-/* Featured work layout */
+/* Featured work */
 
 .featured-work {
 
@@ -459,7 +420,7 @@ section {
 
     max-width: var(--content-width);
 
-    margin: 50px auto 0 auto;
+    margin: 30px auto 0 auto;
 
     display: grid;
 
@@ -485,13 +446,11 @@ section {
 
 
 
-/* Album / project image */
-
 .work-image img {
 
     width: 100%;
 
-    max-width: 550px;
+    max-width: 500px;
 
     height: auto;
 
@@ -517,13 +476,11 @@ section {
 
 
 
-/* Genre */
-
 .genre {
 
-    margin: 0 0 10px 0;
+    margin: 0 0 8px 0;
 
-    font-size: 15px;
+    font-size: 14px;
 
     font-weight: bold;
 
@@ -533,11 +490,9 @@ section {
 
 
 
-/* Song title */
-
 .song-title {
 
-    margin: 0 0 20px 0;
+    margin: 0 0 12px 0;
 
     font-family: var(--heading-font);
 
@@ -549,27 +504,37 @@ section {
 
 
 
-/* Music player */
+.work-info p {
+
+    margin-top: 8px;
+
+    margin-bottom: 8px;
+
+}
+
+
+
+/* Audio player */
 
 audio {
 
     width: 100%;
 
-    margin-top: 20px;
+    margin-top: 12px;
 
 }
 
 
 
 /* =========================================================
-   ARTIST STATEMENT DROPDOWN
+   ARTIST STATEMENT
 ========================================================= */
 
 .artist-statement {
 
     width: 100%;
 
-    margin-top: 45px;
+    margin-top: 30px;
 
     border-top: var(--border-width) solid currentColor;
 
@@ -579,13 +544,11 @@ audio {
 
 
 
-/* The clickable "ARTIST STATEMENT" */
-
 .artist-statement summary {
 
     cursor: pointer;
 
-    padding: 18px 0;
+    padding: 13px 0;
 
     text-align: right;
 
@@ -599,8 +562,6 @@ audio {
 
 
 
-/* Remove default browser triangle */
-
 .artist-statement summary::-webkit-details-marker {
 
     display: none;
@@ -609,7 +570,7 @@ audio {
 
 
 
-/* Add our own + symbol */
+/* Plus symbol */
 
 .artist-statement summary::after {
 
@@ -619,7 +580,7 @@ audio {
 
 
 
-/* Change + to - when opened */
+/* Minus symbol when open */
 
 .artist-statement[open] summary::after {
 
@@ -635,9 +596,9 @@ audio {
 
     max-width: 700px;
 
-    margin: 0 0 30px auto;
+    margin: 0 0 22px auto;
 
-    line-height: 1.7;
+    line-height: 1.6;
 
 }
 
@@ -645,11 +606,7 @@ audio {
 
 /* =========================================================
    SECTIONS 4 + 5
-   ORCHESTRAL / EXPERIMENTAL
 ========================================================= */
-
-
-/* Orchestral */
 
 .orchestral-section {
 
@@ -660,8 +617,6 @@ audio {
 }
 
 
-
-/* Experimental */
 
 .experimental-section {
 
@@ -674,13 +629,13 @@ audio {
 
 
 /* =========================================================
-   COLLECTION LAYOUT
+   COLLECTION
 
-   Left:
+   LEFT:
    Album cover
 
-   Right:
-   Song list
+   RIGHT:
+   One collection description + song list
 ========================================================= */
 
 .collection {
@@ -689,11 +644,11 @@ audio {
 
     max-width: var(--content-width);
 
-    margin: 50px auto 0 auto;
+    margin: 30px auto 0 auto;
 
     display: grid;
 
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 40% 1fr;
 
     gap: var(--column-gap);
 
@@ -715,13 +670,11 @@ audio {
 
 
 
-/* Main album cover */
-
 .collection-image img {
 
     width: 100%;
 
-    max-width: 500px;
+    max-width: 450px;
 
     height: auto;
 
@@ -736,7 +689,7 @@ audio {
 
 
 /* =========================================================
-   SONG LIST
+   COLLECTION INFORMATION
 ========================================================= */
 
 .song-list {
@@ -747,13 +700,37 @@ audio {
 
 
 
-/* Individual song */
+.collection-year {
+
+    margin: 5px 0 8px 0;
+
+}
+
+
+
+.collection-info {
+
+    margin: 0 0 20px 0;
+
+    max-width: 650px;
+
+}
+
+
+
+/* =========================================================
+   INDIVIDUAL SONGS
+
+   Each song ONLY contains:
+   - Song title
+   - Audio player
+========================================================= */
 
 .song {
 
-    padding: 0 0 35px 0;
+    padding: 12px 0 18px 0;
 
-    margin-bottom: 35px;
+    margin-bottom: 12px;
 
     border-bottom: var(--border-width) solid currentColor;
 
@@ -761,7 +738,27 @@ audio {
 
 
 
-/* Remove border from final song */
+/* Song title inside collection */
+
+.song .song-title {
+
+    margin: 0 0 8px 0;
+
+}
+
+
+
+/* Audio player inside song */
+
+.song audio {
+
+    margin-top: 4px;
+
+}
+
+
+
+/* Remove extra space from final song */
 
 .song:last-child {
 
@@ -772,7 +769,7 @@ audio {
 
 
 /* =========================================================
-   COLLECTION ARTIST STATEMENT
+   ORCHESTRAL ACCENT
 ========================================================= */
 
 .orchestral-section .artist-statement {
@@ -783,6 +780,10 @@ audio {
 
 
 
+/* =========================================================
+   EXPERIMENTAL ACCENT
+========================================================= */
+
 .experimental-section .artist-statement {
 
     border-color: var(--experimental-accent);
@@ -792,38 +793,19 @@ audio {
 
 
 /* =========================================================
-   HOVER EFFECTS
-========================================================= */
-
-.song-title {
-
-    transition: 0.2s ease;
-
-}
-
-
-
-/* =========================================================
    MOBILE VERSION
-
-   When the screen is smaller than 768px,
-   everything becomes one column.
 ========================================================= */
 
 @media (max-width: 768px) {
 
 
-    /* Smaller section spacing */
-
     section {
 
-        padding: 70px 20px;
+        padding: 50px 20px;
 
     }
 
 
-
-    /* About */
 
     .about-container {
 
@@ -831,47 +813,39 @@ audio {
 
         min-height: auto;
 
-        gap: 50px;
+        gap: 35px;
 
     }
 
 
-
-    /* Artist name */
 
     .about-info h1 {
 
-        font-size: 50px;
+        font-size: 48px;
 
     }
 
 
-
-    /* Featured work */
 
     .featured-work {
 
         grid-template-columns: 1fr;
 
-        gap: 40px;
+        gap: 30px;
 
     }
 
 
-
-    /* Collection */
 
     .collection {
 
         grid-template-columns: 1fr;
 
-        gap: 50px;
+        gap: 30px;
 
     }
 
 
-
-    /* Images */
 
     .work-image img,
     .collection-image img {
@@ -882,17 +856,13 @@ audio {
 
 
 
-    /* Section title */
-
     .section-title {
 
-        font-size: 36px;
+        font-size: 34px;
 
     }
 
 
-
-    /* Artist statement on phones */
 
     .artist-statement summary {
 
