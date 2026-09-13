@@ -1,484 +1,541 @@
-<!DOCTYPE html>
-<html lang="en">
+/* =========================================================
+   MUSIC PORTFOLIO
+   COMPACT + CONTAINED COLOUR PANELS
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   The entire page is NAVY.
+   Each section is its own contained colour panel.
 
-    <!-- CHANGE THIS: Browser tab title -->
-    <title>YOUR ARTIST NAME — Music Portfolio</title>
+   EASY COLOUR EDITING:
+   Change the five background colours at the top.
+========================================================= */
 
-    <!-- DO NOT CHANGE: Connects this page to style.css -->
-    <link rel="stylesheet" href="style.css">
-</head>
 
-<body>
+/* =========================================================
+   COLOURS + MAIN SETTINGS
+========================================================= */
 
-    <!-- =====================================================
-         SECTION 1 — ABOUT ME
-    ===================================================== -->
+:root {
 
-    <section class="about-section">
+    /* OVERALL PAGE BACKGROUND */
+    --site-background: #101C36;
+    --site-text: #FFFFFF;
 
-        <div class="about-container">
 
-            <div class="about-image">
-                <!-- CHANGE THIS: Your profile image -->
-                <img
-                    src="images/profile.jpg"
-                    alt="Artist profile photo"
-                >
-            </div>
+    /* 01 — ABOUT ME: DARK TEAL */
+    --about-background: #164A4A;
+    --about-text: #FFFFFF;
 
-            <div class="about-info">
 
-                <p class="section-number">01</p>
+    /* 02 — HIGHLIGHT: BRIGHTER DARK BLUE */
+    --highlight-background: #173E70;
+    --highlight-text: #FFFFFF;
 
-                <!-- CHANGE THIS: Artist name -->
-                <h1>YOUR ARTIST NAME</h1>
 
-                <!-- CHANGE THIS: Role -->
-                <h2>Composer / Producer / Musician</h2>
+    /* 03 — PROFESSIONAL PROJECT: DARK PINKISH PURPLE */
+    --professional-background: #542A50;
+    --professional-text: #FFFFFF;
 
-                <!-- CHANGE THIS: Biography -->
-                <p class="bio">
-                    Write your artist biography here.
-                    This can explain who you are, your musical
-                    background, what kind of music you make,
-                    and what interests you as an artist.
-                </p>
 
-                <!-- CHANGE THIS: Email -->
-                <a
-                    class="contact-button"
-                    href="mailto:YOUR-EMAIL@example.com"
-                >
-                    CONTACT ME
-                </a>
+    /* 04 — ORCHESTRAL: DARK RED */
+    --orchestral-background: #5A2025;
+    --orchestral-text: #FFFFFF;
 
-            </div>
 
-        </div>
+    /* 05 — EXPERIMENTAL: DARK GREEN */
+    --experimental-background: #234D3C;
+    --experimental-text: #FFFFFF;
 
-    </section>
 
+    /* FONTS */
+    --heading-font: Arial, Helvetica, sans-serif;
+    --body-font: Arial, Helvetica, sans-serif;
 
-    <!-- =====================================================
-         SECTION 2 — HIGHLIGHT
-    ===================================================== -->
 
-    <section class="highlight-section">
+    /* TEXT SIZES */
+    --body-size: 15px;
+    --heading-size: 48px;
+    --section-title-size: 32px;
+    --song-title-size: 20px;
 
-        <div class="section-container">
 
-            <p class="section-number">02</p>
+    /* LAYOUT */
+    --content-width: 1100px;
+    --panel-width: 1200px;
 
-            <h2 class="section-title">HIGHLIGHT</h2>
+    /* Space inside coloured panels */
+    --section-padding: 38px;
 
-            <!-- CHANGE THIS -->
-            <p class="section-intro">
-                My selected highlight piece and an example
-                of my musical practice.
-            </p>
+    /* Space between coloured panels */
+    --section-gap: 10px;
 
-            <div class="featured-work">
+    /* Space between columns */
+    --column-gap: 35px;
 
-                <div class="work-image">
-                    <!-- CHANGE THIS: Album cover -->
-                    <img
-                        src="images/highlight-cover.jpg"
-                        alt="Album cover for highlight song"
-                    >
-                </div>
+    /* Borders */
+    --border-width: 1px;
+    --panel-radius: 4px;
+}
 
-                <div class="work-info">
 
-                    <!-- CHANGE THIS -->
-                    <p class="genre">GENRE: YOUR GENRE</p>
+/* =========================================================
+   GENERAL
+========================================================= */
 
-                    <!-- CHANGE THIS -->
-                    <h3 class="song-title">YOUR SONG TITLE</h3>
+* {
+    box-sizing: border-box;
+}
 
-                    <!-- CHANGE THIS -->
-                    <p>
-                        <strong>Year:</strong> 2026
-                    </p>
+html {
+    scroll-behavior: smooth;
+}
 
-                    <!-- CHANGE THIS -->
-                    <p>
-                        <strong>Quick info:</strong>
-                        Write a short description of the piece here.
-                    </p>
+body {
+    margin: 0;
+    padding: 0;
 
-                    <!-- CHANGE THIS: Audio file -->
-                    <audio controls src="music/highlight.mp3">
-                        Your browser does not support the audio player.
-                    </audio>
+    /* NAVY BACKGROUND AROUND THE PANELS */
+    background: #101C36;
 
-                </div>
+    color: #FFFFFF;
 
-            </div>
+    font-family: var(--body-font);
+    font-size: var(--body-size);
+    line-height: 1.4;
+}
 
-            <details class="artist-statement">
 
-                <summary>ARTIST STATEMENT</summary>
+/* =========================================================
+   ALL COLOURED PANELS
+========================================================= */
 
-                <!-- CHANGE THIS -->
-                <p>
-                    Write the full artist statement for this
-                    piece here. Explain the ideas, inspiration,
-                    process, and meaning behind the work.
-                </p>
+section {
+    width: calc(100% - 30px);
+    max-width: var(--panel-width);
 
-            </details>
+    margin: var(--section-gap) auto;
 
-        </div>
+    padding: var(--section-padding);
 
-    </section>
+    min-height: auto;
 
+    border: var(--border-width) solid currentColor;
+    border-radius: var(--panel-radius);
+}
 
-    <!-- =====================================================
-         SECTION 3 — PROFESSIONAL PROJECT
-    ===================================================== -->
 
-    <section class="professional-section">
+/* =========================================================
+   SECTION CONTENT
+========================================================= */
 
-        <div class="section-container">
+.section-container {
+    width: 100%;
+    max-width: var(--content-width);
 
-            <p class="section-number">03</p>
+    margin: 0 auto;
+}
 
-            <h2 class="section-title">PROFESSIONAL PROJECT</h2>
+.section-number {
+    margin: 0 0 4px 0;
 
-            <!-- CHANGE THIS -->
-            <p class="section-intro">
-                Music created for a game or professional project.
-            </p>
+    font-family: var(--heading-font);
+    font-size: 13px;
+    font-weight: bold;
 
-            <div class="featured-work">
+    letter-spacing: 2px;
+}
 
-                <div class="work-image">
-                    <!-- CHANGE THIS: Project artwork -->
-                    <img
-                        src="images/professional-cover.jpg"
-                        alt="Professional project artwork"
-                    >
-                </div>
+.section-title {
+    width: 100%;
 
-                <div class="work-info">
+    margin: 0 auto 10px auto;
 
-                    <!-- CHANGE THIS -->
-                    <p class="genre">GENRE: VIDEO GAME MUSIC</p>
+    font-family: var(--heading-font);
+    font-size: var(--section-title-size);
 
-                    <!-- CHANGE THIS -->
-                    <h3 class="song-title">
-                        YOUR GAME / PROJECT TITLE
-                    </h3>
+    line-height: 1;
 
-                    <!-- CHANGE THIS -->
-                    <p>
-                        <strong>Year:</strong> 2026
-                    </p>
+    text-align: center;
+}
 
-                    <!-- CHANGE THIS -->
-                    <p>
-                        <strong>Quick info:</strong>
-                        Write a short description of the project here.
-                    </p>
+.section-intro {
+    max-width: 650px;
 
-                    <!-- CHANGE THIS: Audio file -->
-                    <audio controls src="music/professional.mp3">
-                        Your browser does not support the audio player.
-                    </audio>
+    margin: 0 auto 20px auto;
 
-                </div>
+    text-align: center;
+}
 
-            </div>
 
-            <details class="artist-statement">
+/* =========================================================
+   01 — ABOUT ME
+========================================================= */
 
-                <summary>ARTIST STATEMENT</summary>
+.about-section {
+    background: #164A4A !important;
+    color: #FFFFFF;
+}
 
-                <!-- CHANGE THIS -->
-                <p>
-                    Write the full artist statement for this
-                    professional project here.
-                </p>
+.about-container {
+    width: 100%;
+    max-width: var(--content-width);
 
-            </details>
+    margin: 0 auto;
 
-        </div>
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-    </section>
+    gap: var(--column-gap);
 
+    align-items: center;
+}
 
-    <!-- =====================================================
-         SECTION 4 — ORCHESTRAL
-    ===================================================== -->
+.about-image {
+    width: 100%;
+}
 
-    <section class="orchestral-section">
+.about-image img {
+    width: 100%;
+    max-width: 400px;
 
-        <div class="section-container">
+    height: auto;
 
-            <p class="section-number">04</p>
+    display: block;
+    margin: 0 auto;
 
-            <h2 class="section-title">ORCHESTRAL</h2>
+    border: var(--border-width) solid #FFFFFF;
+}
 
-            <!-- CHANGE THIS -->
-            <p class="section-intro">
-                A collection of orchestral compositions.
-            </p>
+.about-info h1 {
+    margin: 0 0 5px 0;
 
-            <div class="collection">
+    font-family: var(--heading-font);
+    font-size: var(--heading-size);
 
-                <div class="collection-image">
-                    <!-- CHANGE THIS: Collection artwork -->
-                    <img
-                        src="images/orchestral-cover.jpg"
-                        alt="Orchestral album cover"
-                    >
-                </div>
+    line-height: 0.95;
+}
 
-                <div class="song-list">
+.about-info h2 {
+    margin: 0 0 14px 0;
 
-                    <!-- COLLECTION INFORMATION — ONLY ONCE -->
+    font-family: var(--heading-font);
+    font-size: 17px;
+    font-weight: normal;
+}
 
-                    <!-- CHANGE THIS -->
-                    <p class="genre">GENRE: ORCHESTRAL</p>
+.bio {
+    max-width: 600px;
 
-                    <!-- CHANGE THIS -->
-                    <p class="collection-year">
-                        <strong>Year:</strong> 2026
-                    </p>
+    margin-bottom: 18px;
+}
 
-                    <!-- CHANGE THIS -->
-                    <p class="collection-info">
-                        <strong>Quick info:</strong>
-                        A short description of this orchestral
-                        collection and the artist's approach.
-                    </p>
+.contact-button {
+    display: inline-block;
 
+    padding: 8px 18px;
 
-                    <!-- SONG 1 -->
-                    <div class="song">
+    border: var(--border-width) solid #FFFFFF;
 
-                        <!-- CHANGE THIS -->
-                        <h3 class="song-title">
-                            ORCHESTRAL SONG ONE
-                        </h3>
+    color: #FFFFFF;
 
-                        <!-- CHANGE THIS: Audio file -->
-                        <audio controls src="music/orchestral-01.mp3">
-                            Your browser does not support the audio player.
-                        </audio>
+    text-decoration: none;
 
-                    </div>
+    font-size: 14px;
+    font-weight: bold;
 
+    transition: 0.2s ease;
+}
 
-                    <!-- SONG 2 -->
-                    <div class="song">
+.contact-button:hover {
+    background: #FFFFFF;
+    color: #164A4A;
+}
 
-                        <!-- CHANGE THIS -->
-                        <h3 class="song-title">
-                            ORCHESTRAL SONG TWO
-                        </h3>
 
-                        <!-- CHANGE THIS: Audio file -->
-                        <audio controls src="music/orchestral-02.mp3">
-                            Your browser does not support the audio player.
-                        </audio>
+/* =========================================================
+   02 — HIGHLIGHT
+========================================================= */
 
-                    </div>
+.highlight-section {
+    background: #173E70 !important;
+    color: #FFFFFF;
+}
 
 
-                    <!-- SONG 3 -->
-                    <div class="song">
+/* =========================================================
+   03 — PROFESSIONAL PROJECT
+========================================================= */
 
-                        <!-- CHANGE THIS -->
-                        <h3 class="song-title">
-                            ORCHESTRAL SONG THREE
-                        </h3>
+.professional-section {
+    background: #542A50 !important;
+    color: #FFFFFF;
+}
 
-                        <!-- CHANGE THIS: Audio file -->
-                        <audio controls src="music/orchestral-03.mp3">
-                            Your browser does not support the audio player.
-                        </audio>
 
-                    </div>
+/* =========================================================
+   HIGHLIGHT + PROFESSIONAL PROJECT
+========================================================= */
 
+.featured-work {
+    width: 100%;
+    max-width: var(--content-width);
 
-                    <!-- SONG 4 -->
-                    <div class="song">
+    margin: 20px auto 0 auto;
 
-                        <!-- CHANGE THIS -->
-                        <h3 class="song-title">
-                            ORCHESTRAL SONG FOUR
-                        </h3>
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-                        <!-- CHANGE THIS: Audio file -->
-                        <audio controls src="music/orchestral-04.mp3">
-                            Your browser does not support the audio player.
-                        </audio>
+    gap: var(--column-gap);
 
-                    </div>
+    align-items: center;
+}
 
-                </div>
+.work-image {
+    width: 100%;
+}
 
-            </div>
+.work-image img {
+    width: 100%;
+    max-width: 400px;
 
+    height: auto;
 
-            <!-- ARTIST STATEMENT -->
-            <details class="artist-statement">
+    display: block;
+    margin: 0 auto;
 
-                <summary>ARTIST STATEMENT</summary>
+    border: var(--border-width) solid currentColor;
+}
 
-                <!-- CHANGE THIS -->
-                <p>
-                    Write the artist statement for the orchestral
-                    collection here.
-                </p>
+.work-info {
+    width: 100%;
+}
 
-            </details>
+.genre {
+    margin: 0 0 5px 0;
 
-        </div>
+    font-size: 12px;
+    font-weight: bold;
 
-    </section>
+    letter-spacing: 2px;
+}
 
+.song-title {
+    margin: 0 0 8px 0;
 
-    <!-- =====================================================
-         SECTION 5 — EXPERIMENTAL
-    ===================================================== -->
+    font-family: var(--heading-font);
+    font-size: var(--song-title-size);
 
-    <section class="experimental-section">
+    line-height: 1.1;
+}
 
-        <div class="section-container">
+.work-info p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
-            <p class="section-number">05</p>
+audio {
+    width: 100%;
+    margin-top: 8px;
+}
 
-            <h2 class="section-title">EXPERIMENTAL</h2>
 
-            <!-- CHANGE THIS -->
-            <p class="section-intro">
-                Experimental and exploratory musical works.
-            </p>
+/* =========================================================
+   ARTIST STATEMENT
+========================================================= */
 
-            <div class="collection">
+.artist-statement {
+    width: 100%;
 
-                <div class="collection-image">
-                    <!-- CHANGE THIS: Collection artwork -->
-                    <img
-                        src="images/experimental-cover.jpg"
-                        alt="Experimental album cover"
-                    >
-                </div>
+    margin-top: 20px;
 
-                <div class="song-list">
+    border-top: var(--border-width) solid currentColor;
+    border-bottom: var(--border-width) solid currentColor;
+}
 
-                    <!-- COLLECTION INFORMATION — ONLY ONCE -->
+.artist-statement summary {
+    cursor: pointer;
 
-                    <!-- CHANGE THIS -->
-                    <p class="genre">GENRE: EXPERIMENTAL</p>
+    padding: 9px 0;
 
-                    <!-- CHANGE THIS -->
-                    <p class="collection-year">
-                        <strong>Year:</strong> 2026
-                    </p>
+    text-align: right;
 
-                    <!-- CHANGE THIS -->
-                    <p class="collection-info">
-                        <strong>Quick info:</strong>
-                        A short description of this experimental
-                        collection and the artist's approach.
-                    </p>
+    font-size: 13px;
+    font-weight: bold;
 
+    letter-spacing: 1px;
 
-                    <!-- SONG 1 -->
-                    <div class="song">
+    list-style: none;
+}
 
-                        <!-- CHANGE THIS -->
-                        <h3 class="song-title">
-                            EXPERIMENTAL SONG ONE
-                        </h3>
+.artist-statement summary::-webkit-details-marker {
+    display: none;
+}
 
-                        <!-- CHANGE THIS: Audio file -->
-                        <audio controls src="music/experimental-01.mp3">
-                            Your browser does not support the audio player.
-                        </audio>
+.artist-statement summary::after {
+    content: " +";
+}
 
-                    </div>
+.artist-statement[open] summary::after {
+    content: " −";
+}
 
+.artist-statement p {
+    max-width: 650px;
 
-                    <!-- SONG 2 -->
-                    <div class="song">
+    margin: 0 0 15px auto;
 
-                        <!-- CHANGE THIS -->
-                        <h3 class="song-title">
-                            EXPERIMENTAL SONG TWO
-                        </h3>
+    line-height: 1.5;
+}
 
-                        <!-- CHANGE THIS: Audio file -->
-                        <audio controls src="music/experimental-02.mp3">
-                            Your browser does not support the audio player.
-                        </audio>
 
-                    </div>
+/* =========================================================
+   04 — ORCHESTRAL
+========================================================= */
 
+.orchestral-section {
+    background: #5A2025 !important;
+    color: #FFFFFF;
+}
 
-                    <!-- SONG 3 -->
-                    <div class="song">
 
-                        <!-- CHANGE THIS -->
-                        <h3 class="song-title">
-                            EXPERIMENTAL SONG THREE
-                        </h3>
+/* =========================================================
+   05 — EXPERIMENTAL
+========================================================= */
 
-                        <!-- CHANGE THIS: Audio file -->
-                        <audio controls src="music/experimental-03.mp3">
-                            Your browser does not support the audio player.
-                        </audio>
+.experimental-section {
+    background: #234D3C !important;
+    color: #FFFFFF;
+}
 
-                    </div>
 
+/* =========================================================
+   ORCHESTRAL + EXPERIMENTAL COLLECTIONS
+========================================================= */
 
-                    <!-- SONG 4 -->
-                    <div class="song">
+.collection {
+    width: 100%;
+    max-width: var(--content-width);
 
-                        <!-- CHANGE THIS -->
-                        <h3 class="song-title">
-                            EXPERIMENTAL SONG FOUR
-                        </h3>
+    margin: 20px auto 0 auto;
 
-                        <!-- CHANGE THIS: Audio file -->
-                        <audio controls src="music/experimental-04.mp3">
-                            Your browser does not support the audio player.
-                        </audio>
+    display: grid;
+    grid-template-columns: 38% 1fr;
 
-                    </div>
+    gap: var(--column-gap);
 
-                </div>
+    align-items: start;
+}
 
-            </div>
+.collection-image {
+    width: 100%;
+}
 
+.collection-image img {
+    width: 100%;
+    max-width: 380px;
 
-            <!-- ARTIST STATEMENT -->
-            <details class="artist-statement">
+    height: auto;
 
-                <summary>ARTIST STATEMENT</summary>
+    display: block;
+    margin: 0 auto;
 
-                <!-- CHANGE THIS -->
-                <p>
-                    Write the artist statement for the experimental
-                    collection here.
-                </p>
+    border: var(--border-width) solid currentColor;
+}
 
-            </details>
+.song-list {
+    width: 100%;
+}
 
-        </div>
+.collection-year {
+    margin: 3px 0 5px 0;
 
-    </section>
+    font-size: 14px;
+}
 
+.collection-info {
+    margin: 0 0 12px 0;
 
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
+    max-width: 600px;
+}
 
-</body>
-</html>
+
+/* =========================================================
+   INDIVIDUAL SONGS
+========================================================= */
+
+.song {
+    padding: 8px 0 12px 0;
+
+    margin-bottom: 8px;
+
+    border-bottom: var(--border-width) solid currentColor;
+}
+
+.song .song-title {
+    margin: 0 0 5px 0;
+
+    font-size: 18px;
+}
+
+.song audio {
+    margin-top: 2px;
+}
+
+.song:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    section {
+        width: calc(100% - 20px);
+
+        margin: 7px auto;
+
+        padding: 30px 20px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .about-info h1 {
+        font-size: 40px;
+    }
+
+    .featured-work {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .collection {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .work-image img,
+    .collection-image img {
+        max-width: 100%;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .artist-statement summary {
+        text-align: left;
+    }
+
+    .artist-statement p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
