@@ -1,113 +1,91 @@
-style.css
 /* =========================================================
    MUSIC PORTFOLIO
-   STYLE / DESIGN FILE
+   MAIN STYLE SHEET
 
-   THIS IS WHERE YOU CHANGE:
+   This file controls:
    - Colours
    - Fonts
    - Sizes
    - Spacing
    - Layout
    - Borders
-   - Buttons
+   - Mobile design
+
 ========================================================= */
 
 
-
 /* =========================================================
-   1. COLOUR CONTROL PANEL
+   DESIGN CONTROL PANEL
 
-   CHANGE YOUR COLOURS HERE.
-
-   You don't need to search through the rest
-   of the file to change section colours.
+   MOST OF YOUR DESIGN CHANGES CAN BE MADE HERE.
 ========================================================= */
 
 :root {
 
 
-    /* -------------------------
-       GENERAL
-    ------------------------- */
+    /* =====================================================
+       GENERAL COLOURS
+    ===================================================== */
 
     --white: #FFFFFF;
-
     --black: #000000;
 
 
-    /* -------------------------
-       SECTION 1 — ABOUT ME
-       
-       Dark teal + white
-    ------------------------- */
+    /* DEFAULT WEBSITE COLOURS */
 
-    --about-background: #123F43;
+    --site-background: #101C36;
+    --site-text: #FFFFFF;
 
-    --about-text: #FFFFFF;
-
-    --about-border: #FFFFFF;
-
-
-    /* -------------------------
-       SECTION 2 — HIGHLIGHT
-
-       Dark blue + light grey
-       Black accents
-    ------------------------- */
-
-    --highlight-background: #172A46;
-
-    --highlight-text: #E5E7EB;
-
-    --highlight-accent: #000000;
-
-
-    /* -------------------------
-       SECTION 3 — PROFESSIONAL
-
-       Pinkish purple + black
-    ------------------------- */
-
-    --professional-background: #C47BB5;
-
-    --professional-text: #000000;
-
-    --professional-accent: #000000;
-
-
-    /* -------------------------
-       SECTION 4 — ORCHESTRAL
-
-       Dark red + black
-       Dark orange accents
-    ------------------------- */
-
-    --orchestral-background: #641E25;
-
-    --orchestral-text: #000000;
-
-    --orchestral-accent: #B6531C;
-
-
-    /* -------------------------
-       SECTION 5 — EXPERIMENTAL
-
-       Neon green + neon pink
-       Dark purple text
-    ------------------------- */
-
-    --experimental-background: #39FF14;
-
-    --experimental-text: #32104F;
-
-    --experimental-accent: #FF1493;
 
 
     /* =====================================================
-       2. FONT CONTROL
+       SECTION COLOURS
 
-       CHANGE YOUR FONTS HERE.
+       FOR NOW, ALL SECTIONS ARE NAVY + WHITE.
+
+       CHANGE THESE LATER TO GIVE EACH SECTION
+       ITS OWN COLOUR.
+    ===================================================== */
+
+
+    /* ABOUT */
+
+    --about-background: #101C36;
+    --about-text: #FFFFFF;
+    --about-border: #FFFFFF;
+
+
+    /* HIGHLIGHT */
+
+    --highlight-background: #101C36;
+    --highlight-text: #FFFFFF;
+    --highlight-accent: #FFFFFF;
+
+
+    /* PROFESSIONAL PROJECT */
+
+    --professional-background: #101C36;
+    --professional-text: #FFFFFF;
+    --professional-accent: #FFFFFF;
+
+
+    /* ORCHESTRAL */
+
+    --orchestral-background: #101C36;
+    --orchestral-text: #FFFFFF;
+    --orchestral-accent: #FFFFFF;
+
+
+    /* EXPERIMENTAL */
+
+    --experimental-background: #101C36;
+    --experimental-text: #FFFFFF;
+    --experimental-accent: #FFFFFF;
+
+
+
+    /* =====================================================
+       FONTS
     ===================================================== */
 
     --heading-font: Arial, Helvetica, sans-serif;
@@ -115,8 +93,9 @@ style.css
     --body-font: Arial, Helvetica, sans-serif;
 
 
+
     /* =====================================================
-       3. GENERAL SIZE CONTROL
+       TEXT SIZES
     ===================================================== */
 
     --body-size: 18px;
@@ -128,19 +107,21 @@ style.css
     --song-title-size: 28px;
 
 
+
     /* =====================================================
-       4. GENERAL SPACING
+       SPACING
     ===================================================== */
 
     --section-padding: 100px;
 
-    --content-width: 1200px;
+    --content-width: 1100px;
 
-    --column-gap: 70px;
+    --column-gap: 60px;
+
 
 
     /* =====================================================
-       5. BORDER SETTINGS
+       BORDERS
     ===================================================== */
 
     --border-width: 2px;
@@ -152,8 +133,7 @@ style.css
 /* =========================================================
    BASIC RESET
 
-   This removes some default browser spacing so
-   we can control the design ourselves.
+   Removes some default browser spacing.
 ========================================================= */
 
 * {
@@ -161,10 +141,12 @@ style.css
 }
 
 
-html {
-    scroll-behavior: smooth;
-}
 
+/* =========================================================
+   BODY
+
+   Controls the entire website.
+========================================================= */
 
 body {
 
@@ -172,36 +154,130 @@ body {
 
     padding: 0;
 
+    background: var(--site-background);
+
+    color: var(--site-text);
+
     font-family: var(--body-font);
 
     font-size: var(--body-size);
 
-    line-height: 1.6;
+    line-height: 1.5;
 
 }
 
 
 
 /* =========================================================
-   GENERAL SECTION SETTINGS
+   ALL SECTIONS
+
+   Every section fills at least the height of the screen.
 ========================================================= */
 
-.section {
+section {
 
     min-height: 100vh;
 
-    padding: var(--section-padding);
+    padding: var(--section-padding) 30px;
+
+    box-sizing: border-box;
 
 }
 
 
 
 /* =========================================================
-   SECTION COLOURS
+   SECTION CONTAINER
+
+   THIS is what keeps the content centered.
+
+   max-width prevents the website from stretching
+   across an enormous screen.
+
+   margin: 0 auto centers it.
 ========================================================= */
 
+.section-container {
 
-/* SECTION 1 */
+    width: 100%;
+
+    max-width: var(--content-width);
+
+    margin: 0 auto;
+
+}
+
+
+
+/* =========================================================
+   SECTION NUMBERS
+
+   Example:
+   01
+   02
+   03
+========================================================= */
+
+.section-number {
+
+    margin: 0 0 10px 0;
+
+    font-family: var(--heading-font);
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+/* =========================================================
+   SECTION TITLES
+
+   Example:
+   HIGHLIGHT
+   ORCHESTRAL
+   EXPERIMENTAL
+========================================================= */
+
+.section-title {
+
+    width: 100%;
+
+    margin: 0 auto 25px auto;
+
+    font-family: var(--heading-font);
+
+    font-size: var(--section-title-size);
+
+    line-height: 1.1;
+
+    text-align: center;
+
+}
+
+
+
+/* =========================================================
+   SECTION INTRODUCTION
+========================================================= */
+
+.section-intro {
+
+    max-width: 700px;
+
+    margin: 0 auto 50px auto;
+
+    text-align: center;
+
+}
+
+
+
+/* =========================================================
+   SECTION 1 — ABOUT
+========================================================= */
 
 .about-section {
 
@@ -213,106 +289,13 @@ body {
 
 
 
-/* SECTION 2 */
-
-.highlight-section {
-
-    background: var(--highlight-background);
-
-    color: var(--highlight-text);
-
-}
-
-
-
-/* SECTION 3 */
-
-.professional-section {
-
-    background: var(--professional-background);
-
-    color: var(--professional-text);
-
-}
-
-
-
-/* SECTION 4 */
-
-.orchestral-section {
-
-    background: var(--orchestral-background);
-
-    color: var(--orchestral-text);
-
-}
-
-
-
-/* SECTION 5 */
-
-.experimental-section {
-
-    background: var(--experimental-background);
-
-    color: var(--experimental-text);
-
-}
-
-
-
-/* =========================================================
-   SECTION NUMBERS
-========================================================= */
-
-.section-number {
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    letter-spacing: 0.2em;
-
-}
-
-
-
-/* =========================================================
-   SECTION HEADINGS
-========================================================= */
-
-.section-heading {
-
-    max-width: var(--content-width);
-
-    margin: 0 auto 60px auto;
-
-}
-
-
-.section-heading h2 {
-
-    font-family: var(--heading-font);
-
-    font-size: var(--section-title-size);
-
-    line-height: 1.1;
-
-    margin: 10px 0 20px 0;
-
-}
-
-
-
-/* =========================================================
-   SECTION 1 — ABOUT ME
-========================================================= */
+/* About content */
 
 .about-container {
 
-    max-width: var(--content-width);
+    width: 100%;
 
-    min-height: 80vh;
+    max-width: var(--content-width);
 
     margin: 0 auto;
 
@@ -324,19 +307,35 @@ body {
 
     align-items: center;
 
+    min-height: calc(100vh - 200px);
+
 }
 
 
 
-/* PROFILE IMAGE */
+/* About image */
 
-.profile-image img {
+.about-image {
+
+    width: 100%;
+
+}
+
+
+
+/* Profile image */
+
+.about-image img {
 
     width: 100%;
 
     max-width: 550px;
 
+    height: auto;
+
     display: block;
+
+    margin: 0 auto;
 
     border: var(--border-width) solid var(--about-border);
 
@@ -344,53 +343,55 @@ body {
 
 
 
-/* ARTIST NAME */
+/* Artist name */
 
-.about-text h1 {
+.about-info h1 {
+
+    margin: 0 0 10px 0;
 
     font-family: var(--heading-font);
 
-    font-size: clamp(50px, 7vw, var(--heading-size));
+    font-size: var(--heading-size);
 
     line-height: 0.95;
 
-    margin: 0 0 20px 0;
-
 }
 
 
 
-/* ROLE */
+/* Artist role */
 
-.about-text h2 {
+.about-info h2 {
 
-    font-size: 20px;
+    margin: 0 0 30px 0;
+
+    font-family: var(--heading-font);
+
+    font-size: 22px;
 
     font-weight: normal;
 
-    margin-bottom: 30px;
-
 }
 
 
 
-/* BIO */
+/* Biography */
 
 .bio {
 
-    max-width: 600px;
+    max-width: 650px;
+
+    margin-bottom: 40px;
 
 }
 
 
 
-/* CONTACT BUTTON */
+/* Contact button */
 
 .contact-button {
 
     display: inline-block;
-
-    margin-top: 30px;
 
     padding: 12px 25px;
 
@@ -408,7 +409,7 @@ body {
 
 
 
-/* CONTACT BUTTON HOVER */
+/* Contact button hover */
 
 .contact-button:hover {
 
@@ -422,17 +423,43 @@ body {
 
 /* =========================================================
    SECTIONS 2 + 3
-   FEATURED WORK LAYOUT
-
-   IMAGE LEFT
-   INFORMATION RIGHT
+   HIGHLIGHT / PROFESSIONAL PROJECT
 ========================================================= */
+
+
+/* Highlight */
+
+.highlight-section {
+
+    background: var(--highlight-background);
+
+    color: var(--highlight-text);
+
+}
+
+
+
+/* Professional */
+
+.professional-section {
+
+    background: var(--professional-background);
+
+    color: var(--professional-text);
+
+}
+
+
+
+/* Featured work layout */
 
 .featured-work {
 
+    width: 100%;
+
     max-width: var(--content-width);
 
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
 
     display: grid;
 
@@ -440,105 +467,95 @@ body {
 
     gap: var(--column-gap);
 
-    align-items: start;
-
-}
-
-
-
-/* ALBUM COVER */
-
-.work-image img {
-
-    width: 100%;
-
-    display: block;
-
-}
-
-
-
-/* SECTION 2 BORDER */
-
-.highlight-section .work-image img {
-
-    border: var(--border-width) solid var(--highlight-accent);
-
-}
-
-
-
-/* SECTION 3 BORDER */
-
-.professional-section .work-image img {
-
-    border: var(--border-width) solid var(--professional-accent);
-
-}
-
-
-
-/* INFORMATION */
-
-.work-information {
-
-    padding-top: 10px;
-
-}
-
-
-
-/* GENRE */
-
-.genre {
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    letter-spacing: 0.15em;
-
-    text-transform: uppercase;
-
-}
-
-
-
-/* SONG / PROJECT TITLE */
-
-.work-information h3 {
-
-    font-family: var(--heading-font);
-
-    font-size: 45px;
-
-    line-height: 1.1;
-
-    margin: 10px 0 25px 0;
-
-}
-
-
-
-/* QUICK INFORMATION */
-
-.quick-info {
-
-    margin-bottom: 30px;
+    align-items: center;
 
 }
 
 
 
 /* =========================================================
-   AUDIO PLAYER
+   WORK IMAGE
 ========================================================= */
+
+.work-image {
+
+    width: 100%;
+
+}
+
+
+
+/* Album / project image */
+
+.work-image img {
+
+    width: 100%;
+
+    max-width: 550px;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto;
+
+    border: var(--border-width) solid currentColor;
+
+}
+
+
+
+/* =========================================================
+   WORK INFORMATION
+========================================================= */
+
+.work-info {
+
+    width: 100%;
+
+}
+
+
+
+/* Genre */
+
+.genre {
+
+    margin: 0 0 10px 0;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+/* Song title */
+
+.song-title {
+
+    margin: 0 0 20px 0;
+
+    font-family: var(--heading-font);
+
+    font-size: var(--song-title-size);
+
+    line-height: 1.1;
+
+}
+
+
+
+/* Music player */
 
 audio {
 
     width: 100%;
 
-    margin: 10px 0 20px 0;
+    margin-top: 20px;
 
 }
 
@@ -550,7 +567,9 @@ audio {
 
 .artist-statement {
 
-    margin-top: 30px;
+    width: 100%;
+
+    margin-top: 45px;
 
     border-top: var(--border-width) solid currentColor;
 
@@ -560,17 +579,19 @@ audio {
 
 
 
-/* DROPDOWN TITLE */
+/* The clickable "ARTIST STATEMENT" */
 
 .artist-statement summary {
 
     cursor: pointer;
 
-    padding: 20px 0;
+    padding: 18px 0;
+
+    text-align: right;
 
     font-weight: bold;
 
-    letter-spacing: 0.1em;
+    letter-spacing: 1px;
 
     list-style: none;
 
@@ -578,7 +599,7 @@ audio {
 
 
 
-/* Remove default arrow */
+/* Remove default browser triangle */
 
 .artist-statement summary::-webkit-details-marker {
 
@@ -588,37 +609,33 @@ audio {
 
 
 
-/* Add our own arrow */
+/* Add our own + symbol */
 
 .artist-statement summary::after {
 
-    content: " + ";
-
-    float: right;
-
-    font-size: 20px;
+    content: " +";
 
 }
 
 
 
-/* Change + to - when open */
+/* Change + to - when opened */
 
 .artist-statement[open] summary::after {
 
-    content: " − ";
+    content: " −";
 
 }
 
 
 
-/* STATEMENT CONTENT */
+/* Statement text */
 
-.statement-content {
+.artist-statement p {
 
-    max-width: 750px;
+    max-width: 700px;
 
-    padding: 10px 0 30px 0;
+    margin: 0 0 30px auto;
 
     line-height: 1.7;
 
@@ -627,24 +644,58 @@ audio {
 
 
 /* =========================================================
-   SECTION 4 + 5
+   SECTIONS 4 + 5
+   ORCHESTRAL / EXPERIMENTAL
+========================================================= */
+
+
+/* Orchestral */
+
+.orchestral-section {
+
+    background: var(--orchestral-background);
+
+    color: var(--orchestral-text);
+
+}
+
+
+
+/* Experimental */
+
+.experimental-section {
+
+    background: var(--experimental-background);
+
+    color: var(--experimental-text);
+
+}
+
+
+
+/* =========================================================
    COLLECTION LAYOUT
 
-   LARGE IMAGE LEFT
-   SONG LIST RIGHT
+   Left:
+   Album cover
+
+   Right:
+   Song list
 ========================================================= */
 
 .collection {
 
+    width: 100%;
+
     max-width: var(--content-width);
 
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
 
     display: grid;
 
     grid-template-columns: 40% 60%;
 
-    gap: 50px;
+    gap: var(--column-gap);
 
     align-items: start;
 
@@ -652,33 +703,33 @@ audio {
 
 
 
-/* MAIN COLLECTION COVER */
+/* =========================================================
+   COLLECTION IMAGE
+========================================================= */
 
-.collection-cover img {
+.collection-image {
 
     width: 100%;
 
+}
+
+
+
+/* Main album cover */
+
+.collection-image img {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    height: auto;
+
     display: block;
 
-}
+    margin: 0 auto;
 
-
-
-/* ORCHESTRAL IMAGE BORDER */
-
-.orchestral-section .collection-cover img {
-
-    border: var(--border-width) solid var(--orchestral-accent);
-
-}
-
-
-
-/* EXPERIMENTAL IMAGE BORDER */
-
-.experimental-section .collection-cover img {
-
-    border: 5px solid var(--experimental-accent);
+    border: var(--border-width) solid currentColor;
 
 }
 
@@ -696,11 +747,13 @@ audio {
 
 
 
-/* INDIVIDUAL SONG */
+/* Individual song */
 
 .song {
 
-    padding: 20px 0;
+    padding: 0 0 35px 0;
+
+    margin-bottom: 35px;
 
     border-bottom: var(--border-width) solid currentColor;
 
@@ -708,30 +761,19 @@ audio {
 
 
 
-/* SONG TITLE */
+/* Remove border from final song */
 
-.song h3 {
+.song:last-child {
 
-    font-family: var(--heading-font);
-
-    font-size: var(--song-title-size);
-
-    margin: 0 0 10px 0;
+    margin-bottom: 0;
 
 }
 
 
 
 /* =========================================================
-   ORCHESTRAL ACCENTS
+   COLLECTION ARTIST STATEMENT
 ========================================================= */
-
-.orchestral-section .genre {
-
-    color: var(--orchestral-accent);
-
-}
-
 
 .orchestral-section .artist-statement {
 
@@ -739,26 +781,6 @@ audio {
 
 }
 
-
-
-/* =========================================================
-   EXPERIMENTAL ACCENTS
-
-   Neon pink frames / outlines
-========================================================= */
-
-.experimental-section .genre {
-
-    color: var(--experimental-accent);
-
-}
-
-
-.experimental-section .song {
-
-    border-color: var(--experimental-accent);
-
-}
 
 
 .experimental-section .artist-statement {
@@ -770,30 +792,12 @@ audio {
 
 
 /* =========================================================
-   SECTION INFORMATION
+   HOVER EFFECTS
 ========================================================= */
 
-.section-info {
+.song-title {
 
-    max-width: var(--content-width);
-
-    margin: 60px auto 0 auto;
-
-}
-
-
-
-/* =========================================================
-   FULL WIDTH ARTIST STATEMENT
-========================================================= */
-
-.full-width {
-
-    max-width: var(--content-width);
-
-    margin-left: auto;
-
-    margin-right: auto;
+    transition: 0.2s ease;
 
 }
 
@@ -802,25 +806,50 @@ audio {
 /* =========================================================
    MOBILE VERSION
 
-   This changes the layout when the screen
-   is smaller than 768px.
+   When the screen is smaller than 768px,
+   everything becomes one column.
 ========================================================= */
 
 @media (max-width: 768px) {
 
 
-    /* Less space around sections */
+    /* Smaller section spacing */
 
-    .section {
+    section {
 
-        padding: 60px 25px;
+        padding: 70px 20px;
 
     }
 
 
-    /* ABOUT */
+
+    /* About */
 
     .about-container {
+
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        gap: 50px;
+
+    }
+
+
+
+    /* Artist name */
+
+    .about-info h1 {
+
+        font-size: 50px;
+
+    }
+
+
+
+    /* Featured work */
+
+    .featured-work {
 
         grid-template-columns: 1fr;
 
@@ -829,53 +858,59 @@ audio {
     }
 
 
-    /* FEATURED WORK */
 
-    .featured-work {
-
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-
-    }
-
-
-    /* COLLECTIONS */
+    /* Collection */
 
     .collection {
 
         grid-template-columns: 1fr;
 
-        gap: 35px;
+        gap: 50px;
 
     }
 
 
-    /* SECTION TITLE */
 
-    .section-heading h2 {
+    /* Images */
 
-        font-size: 35px;
+    .work-image img,
+    .collection-image img {
 
-    }
-
-
-    /* SONG / PROJECT TITLE */
-
-    .work-information h3 {
-
-        font-size: 32px;
+        max-width: 100%;
 
     }
 
 
-    /* SONG TITLES */
 
-    .song h3 {
+    /* Section title */
 
-        font-size: 23px;
+    .section-title {
+
+        font-size: 36px;
 
     }
+
+
+
+    /* Artist statement on phones */
+
+    .artist-statement summary {
+
+        text-align: left;
+
+    }
+
+
+
+    .artist-statement p {
+
+        margin-left: 0;
+
+        margin-right: 0;
+
+    }
+
+}
 
 
 }
