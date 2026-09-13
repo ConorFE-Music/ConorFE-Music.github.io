@@ -1,7 +1,6 @@
 /* =========================================================
    MUSIC PORTFOLIO
-   Compact portfolio sections, with a spacious About page
-========================================================= */
+   ========================================================= */
 
 * {
     box-sizing: border-box;
@@ -10,6 +9,40 @@
 html {
     scroll-behavior: smooth;
 }
+
+
+/* =========================================================
+   LOCAL FONTS
+   ========================================================= */
+
+@font-face {
+    font-family: 'Nabla';
+    src: url('fonts/Nabla-Regular-VariableFont_EDPT,EHLT.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik 80s Fade';
+    src: url('fonts/Rubik80sFade-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Share Tech';
+    src: url('fonts/ShareTech-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
 
 body {
     margin: 0;
@@ -21,49 +54,25 @@ body {
     line-height: 1.5;
 }
 
-/* ---------------------------------------------------------
-   GOOGLE FONT ASSIGNMENTS
---------------------------------------------------------- */
 
-.about-info h1 {
-    font-family: 'Nabla', sans-serif;
-}
-
-.section-title {
-    font-family: 'Rubik 80s Fade', sans-serif;
-}
-
-.about-info h2,
-.song-title,
-.artist-statement summary,
-.section-number,
-.genre {
-    font-family: 'Share Tech', sans-serif;
-}
-
-body {
-    font-family: 'Share Tech', sans-serif;
-}
-
-/* ---------------------------------------------------------
+/* =========================================================
    GENERAL SECTIONS
-   Keep the inside of every music box exactly as before.
-   Only the space BETWEEN boxes is increased.
---------------------------------------------------------- */
+   ========================================================= */
 
 section {
     width: calc(100% - 30px);
     max-width: 1200px;
     margin: 30px auto;
     padding: 38px;
-    border: 1px solid rgba(255,255,255,0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 4px;
     color: #FFFFFF;
 }
 
-/* ---------------------------------------------------------
-   ABOUT ME — spacious opening section
---------------------------------------------------------- */
+
+/* =========================================================
+   ABOUT ME
+   ========================================================= */
 
 .about-section {
     background: #101C36 !important;
@@ -77,8 +86,10 @@ section {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
+
     display: grid;
     grid-template-columns: 280px 1fr;
+
     gap: 55px;
     align-items: center;
 }
@@ -95,42 +106,54 @@ section {
     max-width: 650px;
 }
 
+
+/* Artist name = Nabla */
+
 .about-info h1 {
+    font-family: 'Nabla', sans-serif;
     margin: 0 0 8px;
     font-size: 48px;
     line-height: 1;
 }
 
+
+/* Artist role = Share Tech */
+
 .about-info h2 {
+    font-family: 'Share Tech', sans-serif;
     margin: 0 0 20px;
     font-size: 20px;
     font-weight: normal;
-}
-
-.section-number {
-    margin: 0 0 8px;
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    font-weight: bold;
 }
 
 .bio {
     margin: 0 0 24px;
 }
 
+
+/* =========================================================
+   CONTACT BUTTON
+   ========================================================= */
+
 .contact-button {
     display: inline-block;
+
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
+
     padding: 8px 14px;
+
     text-decoration: none;
+
+    font-family: 'Share Tech', sans-serif;
     font-size: 12px;
     letter-spacing: 0.08em;
 }
 
-/* ---------------------------------------------------------
-   MUSIC SECTION COLOURS
---------------------------------------------------------- */
+
+/* =========================================================
+   SECTION COLOURS
+   ========================================================= */
 
 .highlight-section {
     background: #173E70 !important;
@@ -148,37 +171,74 @@ section {
     background: #234D3C !important;
 }
 
-/* ---------------------------------------------------------
+
+/* =========================================================
    SECTION CONTENT
---------------------------------------------------------- */
+   ========================================================= */
 
 .section-container {
     max-width: 1100px;
     margin: 0 auto;
 }
 
+
+/* Main section titles = Rubik 80s Fade */
+
 .section-title {
+    font-family: 'Rubik 80s Fade', sans-serif;
+
     margin: 0 0 8px;
+
     font-size: 32px;
     line-height: 1.05;
 }
 
+
+/* Intro/body text = Share Tech */
+
 .section-intro {
+    font-family: 'Share Tech', sans-serif;
     margin: 0 0 28px;
 }
 
+
+/* =========================================================
+   SECTION NUMBERS
+   ========================================================= */
+
+.section-number {
+    font-family: 'Share Tech', sans-serif;
+
+    margin: 0 0 8px;
+
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   FEATURED WORK
+   ========================================================= */
+
 .featured-work {
     display: grid;
+
     grid-template-columns: minmax(200px, 320px) 1fr;
+
     gap: 35px;
+
     align-items: start;
 }
 
 .work-image img,
 .collection-image img {
     display: block;
+
     width: 100%;
+
     aspect-ratio: 1 / 1;
+
     object-fit: cover;
 }
 
@@ -187,22 +247,47 @@ section {
     min-width: 0;
 }
 
+
+/* =========================================================
+   GENRE / YEAR / INFORMATION
+   ========================================================= */
+
 .genre {
+    font-family: 'Share Tech', sans-serif;
+
     margin: 0 0 8px;
+
     font-size: 12px;
+
     letter-spacing: 0.12em;
+
     font-weight: bold;
 }
 
+.work-info p {
+    font-family: 'Share Tech', sans-serif;
+    margin: 7px 0;
+}
+
+
+/* =========================================================
+   SONG TITLES
+   ========================================================= */
+
 .song-title {
+    font-family: 'Share Tech', sans-serif;
+
     margin: 4px 0 12px;
+
     font-size: 20px;
+
     line-height: 1.15;
 }
 
-.work-info p {
-    margin: 7px 0;
-}
+
+/* =========================================================
+   AUDIO
+   ========================================================= */
 
 audio {
     width: 100%;
@@ -210,51 +295,78 @@ audio {
     margin-top: 12px;
 }
 
-/* ---------------------------------------------------------
+
+/* =========================================================
    ARTIST STATEMENT
---------------------------------------------------------- */
+   ========================================================= */
 
 .artist-statement {
     margin-top: 28px;
-    border-top: 1px solid rgba(255,255,255,0.35);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+
     padding-top: 14px;
 }
 
 .artist-statement summary {
+    font-family: 'Share Tech', sans-serif;
+
     cursor: pointer;
+
     font-size: 12px;
+
     font-weight: bold;
+
     letter-spacing: 0.1em;
 }
 
 .artist-statement p {
+    font-family: 'Share Tech', sans-serif;
+
     max-width: 850px;
+
     margin-bottom: 0;
 }
 
-/* ---------------------------------------------------------
+
+/* =========================================================
    COLLECTIONS
---------------------------------------------------------- */
+   ORCHESTRAL + EXPERIMENTAL
+   ========================================================= */
 
 .collection {
     display: grid;
+
     grid-template-columns: minmax(200px, 320px) 1fr;
+
     gap: 35px;
+
     align-items: start;
 }
 
 .collection-year,
 .collection-info {
+    font-family: 'Share Tech', sans-serif;
+
     margin: 7px 0 18px;
 }
 
+
+/* =========================================================
+   INDIVIDUAL SONGS
+   ========================================================= */
+
 .song {
     padding: 16px 0;
-    border-top: 1px solid rgba(255,255,255,0.25);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .song .song-title {
+    font-family: 'Share Tech', sans-serif;
+
     margin: 0 0 8px;
+
     font-size: 18px;
 }
 
@@ -262,15 +374,18 @@ audio {
     margin-top: 0;
 }
 
-/* ---------------------------------------------------------
+
+/* =========================================================
    MOBILE
---------------------------------------------------------- */
+   ========================================================= */
 
 @media (max-width: 700px) {
 
     section {
         width: calc(100% - 16px);
+
         padding: 26px;
+
         margin: 20px auto;
     }
 
@@ -282,6 +397,7 @@ audio {
     .featured-work,
     .collection {
         grid-template-columns: 1fr;
+
         gap: 25px;
     }
 
