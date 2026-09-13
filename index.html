@@ -1,4 +1,3 @@
-index.html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,18 +5,18 @@ index.html
 
     <!-- =====================================================
          BASIC WEBSITE INFORMATION
-         You usually don't need to change anything here
-    ====================================================== -->
+    ===================================================== -->
 
     <meta charset="UTF-8">
 
     <!-- Makes the website work properly on phones -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CHANGE THIS: Name shown in the browser tab -->
-    <title>Conor Fenton-Enright — Music Portfolio</title>
+    <!-- CHANGE THIS:
+         This appears in the browser tab -->
+    <title>YOUR ARTIST NAME — Music Portfolio</title>
 
-    <!-- Connects this page to our design file -->
+    <!-- Connects this HTML file to our CSS -->
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -28,101 +27,66 @@ index.html
 
     <!-- =====================================================
          SECTION 1 — ABOUT ME
-    ====================================================== -->
+    ===================================================== -->
 
-    <section class="section about-section">
-
-
-        <!-- Everything inside this container is the
-             content of the About Me section -->
+    <section class="about-section">
 
         <div class="about-container">
 
 
-            <!-- ============================
-                 PROFILE IMAGE
-            ============================= -->
+            <!-- ---------- PROFILE IMAGE ---------- -->
 
-            <div class="profile-image">
+            <div class="about-image">
 
-                <!--
-                    CHANGE THE IMAGE:
-
-                    Put your image inside the "images" folder.
-
-                    Example:
-                    images/profile.jpg
-
-                    Then change the filename below if needed.
-                -->
+                <!-- CHANGE THIS:
+                     Replace profile.jpg with your friend's
+                     actual image file name later -->
 
                 <img
                     src="images/profile.jpg"
-                    alt="Artist profile photograph"
+                    alt="Artist profile photo"
                 >
 
             </div>
 
 
-            <!-- ============================
-                 ABOUT ME TEXT
-            ============================= -->
+            <!-- ---------- ABOUT INFORMATION ---------- -->
 
-            <div class="about-text">
+            <div class="about-info">
 
+                <p class="section-number">01</p>
 
-                <!-- SECTION NUMBER -->
+                <!-- CHANGE THIS:
+                     Artist's name -->
 
-                <p class="section-number">
-                    01
-                </p>
+                <h1>YOUR ARTIST NAME</h1>
 
+                <!-- CHANGE THIS:
+                     Artist's roles -->
 
-                <!-- CHANGE THIS: YOUR NAME -->
-
-                <h1>
-                    Conor Fenton-Enright
-                </h1>
+                <h2>Composer / Producer / Musician</h2>
 
 
-                <!-- CHANGE THIS: YOUR ROLE -->
-
-                <h2>
-                    Composer / Producer / Musician
-                </h2>
-
-
-                <!-- CHANGE THIS: YOUR BIO -->
+                <!-- CHANGE THIS:
+                     Artist biography -->
 
                 <p class="bio">
-
                     Write your artist biography here.
-
                     This can explain who you are, your musical
                     background, what kind of music you make,
                     and what interests you as an artist.
-
                 </p>
 
 
-                <!-- ============================
-                     CONTACT
-                ============================= -->
-
-                <!--
-                    CHANGE THE EMAIL ADDRESS.
-
-                    Example:
-                    href="mailto:nayha@email.com"
-                -->
+                <!-- CHANGE THIS:
+                     Replace the email address -->
 
                 <a
-                    href="mailto:YOUR-EMAIL@example.com"
                     class="contact-button"
+                    href="mailto:YOUR-EMAIL@example.com"
                 >
                     CONTACT ME
                 </a>
-
 
             </div>
 
@@ -134,168 +98,119 @@ index.html
 
     <!-- =====================================================
          SECTION 2 — HIGHLIGHT
-    ====================================================== -->
+    ===================================================== -->
 
-    <section class="section highlight-section">
+    <section class="highlight-section">
 
+        <div class="section-container">
 
-        <!-- ============================
-             SECTION TITLE
-        ============================= -->
+            <p class="section-number">02</p>
 
-        <div class="section-heading">
+            <!-- CHANGE THIS:
+                 Section title -->
 
-            <p class="section-number">
-                02
-            </p>
-
-            <!-- CHANGE THIS IF YOU WANT A DIFFERENT TITLE -->
-
-            <h2>
+            <h2 class="section-title">
                 HIGHLIGHT
             </h2>
 
-            <!-- OPTIONAL SHORT INTRO -->
 
-            <p>
+            <!-- CHANGE THIS:
+                 Short description -->
+
+            <p class="section-intro">
                 My selected highlight piece and an example
                 of my musical practice.
             </p>
 
-        </div>
 
 
+            <!-- ---------- FEATURED WORK ---------- -->
 
-        <!-- ============================
-             MAIN WORK LAYOUT
-
-             IMAGE          INFORMATION
-             LEFT            RIGHT
-        ============================= -->
-
-        <div class="featured-work">
+            <div class="featured-work">
 
 
-            <!-- ============================
-                 LEFT SIDE — ALBUM COVER
-            ============================= -->
+                <!-- ALBUM COVER -->
 
-            <div class="work-image">
+                <div class="work-image">
 
-                <!--
-                    CHANGE IMAGE:
+                    <!-- CHANGE THIS:
+                         Replace with actual album cover -->
 
-                    Put your album artwork inside
-                    the images folder.
-                -->
-
-                <img
-                    src="images/highlight-cover.jpg"
-                    alt="Album cover for highlight song"
-                >
-
-            </div>
-
-
-
-            <!-- ============================
-                 RIGHT SIDE — SONG INFORMATION
-            ============================= -->
-
-            <div class="work-information">
-
-
-                <!-- CHANGE: GENRE -->
-
-                <p class="genre">
-                    GENRE: YOUR GENRE
-                </p>
-
-
-                <!-- CHANGE: SONG TITLE -->
-
-                <h3>
-                    YOUR SONG TITLE
-                </h3>
-
-
-                <!-- CHANGE: QUICK INFORMATION -->
-
-                <p class="quick-info">
-
-                    Year: 2026<br>
-                    Role: Composer / Producer<br>
-                    Software: YOUR SOFTWARE
-
-                </p>
-
-
-
-                <!-- ============================
-                     MUSIC PLAYER
-                ============================= -->
-
-                <!--
-                    CHANGE THE MUSIC FILE:
-
-                    Put your MP3 in the "music" folder.
-
-                    Example:
-                    music/highlight.mp3
-                -->
-
-                <audio controls>
-
-                    <source
-                        src="music/highlight.mp3"
-                        type="audio/mpeg"
+                    <img
+                        src="images/highlight-cover.jpg"
+                        alt="Album cover for highlight song"
                     >
 
-                    Your browser does not support audio.
-
-                </audio>
+                </div>
 
 
 
-                <!-- ============================
-                     ARTIST STATEMENT DROPDOWN
-                ============================= -->
+                <!-- SONG INFORMATION -->
 
-                <details class="artist-statement">
+                <div class="work-info">
 
-                    <summary>
-                        ARTIST STATEMENT
-                    </summary>
+                    <!-- CHANGE THIS -->
 
-
-                    <div class="statement-content">
-
-                        <!-- CHANGE: YOUR ARTIST STATEMENT -->
-
-                        <p>
-
-                            Write your detailed artist statement
-                            for this piece here.
-
-                        </p>
+                    <p class="genre">
+                        GENRE: YOUR GENRE
+                    </p>
 
 
-                        <!-- ADD MORE PARAGRAPHS IF NEEDED -->
+                    <!-- CHANGE THIS -->
 
-                        <p>
+                    <h3 class="song-title">
+                        YOUR SONG TITLE
+                    </h3>
 
-                            You can add another paragraph here
-                            to explain your process, influences,
-                            ideas, techniques, or intentions.
 
-                        </p>
+                    <!-- CHANGE THIS -->
 
-                    </div>
+                    <p>
+                        <strong>Year:</strong> 2026
+                    </p>
 
-                </details>
+                    <p>
+                        <strong>Quick info:</strong>
+                        Write a short description of the piece here.
+                    </p>
 
+
+                    <!-- MUSIC PLAYER -->
+
+                    <!-- CHANGE THIS:
+                         Replace highlight.mp3 with your
+                         actual music file -->
+
+                    <audio
+                        controls
+                        src="music/highlight.mp3"
+                    >
+                        Your browser does not support the audio player.
+                    </audio>
+
+                </div>
 
             </div>
+
+
+
+            <!-- ---------- ARTIST STATEMENT ---------- -->
+
+            <details class="artist-statement">
+
+                <summary>
+                    ARTIST STATEMENT
+                </summary>
+
+                <!-- CHANGE THIS -->
+
+                <p>
+                    Write the full artist statement for this
+                    piece here. Explain the ideas, inspiration,
+                    process, and meaning behind the work.
+                </p>
+
+            </details>
 
         </div>
 
@@ -305,140 +220,110 @@ index.html
 
     <!-- =====================================================
          SECTION 3 — PROFESSIONAL PROJECT
-    ====================================================== -->
+    ===================================================== -->
 
-    <section class="section professional-section">
+    <section class="professional-section">
 
+        <div class="section-container">
 
-        <!-- SECTION TITLE -->
+            <p class="section-number">03</p>
 
-        <div class="section-heading">
+            <!-- CHANGE THIS -->
 
-            <p class="section-number">
-                03
-            </p>
-
-            <h2>
+            <h2 class="section-title">
                 PROFESSIONAL PROJECT
             </h2>
 
-            <p>
-                Music created for a professional or collaborative
-                project.
+
+            <!-- CHANGE THIS -->
+
+            <p class="section-intro">
+                Music created for a game or professional project.
             </p>
 
-        </div>
 
 
+            <!-- ---------- FEATURED PROJECT ---------- -->
 
-        <!-- ============================
-             MAIN PROJECT
-        ============================= -->
-
-        <div class="featured-work">
+            <div class="featured-work">
 
 
-            <!-- ============================
-                 LEFT — PROJECT IMAGE
-            ============================= -->
+                <!-- PROJECT IMAGE -->
 
-            <div class="work-image">
+                <div class="work-image">
 
-                <!-- CHANGE IMAGE -->
+                    <!-- CHANGE THIS -->
 
-                <img
-                    src="images/professional-cover.jpg"
-                    alt="Professional project artwork"
-                >
-
-            </div>
-
-
-
-            <!-- ============================
-                 RIGHT — PROJECT INFORMATION
-            ============================= -->
-
-            <div class="work-information">
-
-
-                <!-- CHANGE: PROJECT TYPE -->
-
-                <p class="genre">
-                    VIDEO GAME MUSIC
-                </p>
-
-
-                <!-- CHANGE: GAME / PROJECT TITLE -->
-
-                <h3>
-                    YOUR GAME / PROJECT TITLE
-                </h3>
-
-
-                <!-- CHANGE: QUICK INFORMATION -->
-
-                <p class="quick-info">
-
-                    Year: 2026<br>
-                    Role: Composer<br>
-                    Project: YOUR PROJECT<br>
-                    Collaborators: YOUR COLLABORATORS
-
-                </p>
-
-
-
-                <!-- MUSIC -->
-
-                <audio controls>
-
-                    <source
-                        src="music/professional.mp3"
-                        type="audio/mpeg"
+                    <img
+                        src="images/professional-cover.jpg"
+                        alt="Professional project artwork"
                     >
 
-                    Your browser does not support audio.
-
-                </audio>
+                </div>
 
 
 
-                <!-- ARTIST STATEMENT -->
+                <!-- PROJECT INFORMATION -->
 
-                <details class="artist-statement">
+                <div class="work-info">
 
-                    <summary>
-                        ARTIST STATEMENT
-                    </summary>
+                    <!-- CHANGE THIS -->
 
-
-                    <div class="statement-content">
-
-                        <!-- CHANGE: STATEMENT -->
-
-                        <p>
-
-                            Write your artist statement about
-                            this professional project here.
-
-                        </p>
+                    <p class="genre">
+                        GENRE: VIDEO GAME MUSIC
+                    </p>
 
 
-                        <p>
+                    <!-- CHANGE THIS -->
 
-                            Explain the project, your role,
-                            your creative decisions, and how
-                            the music supports the experience.
+                    <h3 class="song-title">
+                        YOUR GAME / PROJECT TITLE
+                    </h3>
 
-                        </p>
 
-                    </div>
+                    <!-- CHANGE THIS -->
 
-                </details>
+                    <p>
+                        <strong>Year:</strong> 2026
+                    </p>
 
+                    <p>
+                        <strong>Quick info:</strong>
+                        Write a short description of the project here.
+                    </p>
+
+
+                    <!-- CHANGE THIS -->
+
+                    <audio
+                        controls
+                        src="music/professional.mp3"
+                    >
+                        Your browser does not support the audio player.
+                    </audio>
+
+                </div>
 
             </div>
+
+
+
+            <!-- ---------- ARTIST STATEMENT ---------- -->
+
+            <details class="artist-statement">
+
+                <summary>
+                    ARTIST STATEMENT
+                </summary>
+
+                <!-- CHANGE THIS -->
+
+                <p>
+                    Write the full artist statement for this
+                    professional project here.
+                </p>
+
+            </details>
 
         </div>
 
@@ -448,226 +333,219 @@ index.html
 
     <!-- =====================================================
          SECTION 4 — ORCHESTRAL
-    ====================================================== -->
+    ===================================================== -->
 
-    <section class="section orchestral-section">
+    <section class="orchestral-section">
 
+        <div class="section-container">
 
-        <!-- SECTION TITLE -->
+            <p class="section-number">04</p>
 
-        <div class="section-heading">
+            <!-- CHANGE THIS -->
 
-            <p class="section-number">
-                04
-            </p>
-
-            <h2>
+            <h2 class="section-title">
                 ORCHESTRAL
             </h2>
 
-            <p>
+
+            <!-- CHANGE THIS -->
+
+            <p class="section-intro">
                 A collection of orchestral compositions.
             </p>
 
-        </div>
+
+
+            <!-- ---------- ORCHESTRAL COLLECTION ---------- -->
+
+            <div class="collection">
+
+
+                <!-- MAIN ALBUM COVER -->
+
+                <div class="collection-image">
+
+                    <!-- CHANGE THIS -->
+
+                    <img
+                        src="images/orchestral-cover.jpg"
+                        alt="Orchestral album cover"
+                    >
+
+                </div>
 
 
 
-        <!-- ============================
-             COLLECTION LAYOUT
+                <!-- SONG LIST -->
 
-             ALBUM COVER | SONG LIST
-        ============================= -->
-
-        <div class="collection">
+                <div class="song-list">
 
 
-            <!-- ============================
-                 LEFT — MAIN ALBUM COVER
-            ============================= -->
+                    <!-- SONG 1 -->
 
-            <div class="collection-cover">
+                    <div class="song">
 
-                <!-- CHANGE IMAGE -->
+                        <!-- CHANGE THIS -->
 
-                <img
-                    src="images/orchestral-cover.jpg"
-                    alt="Orchestral music collection artwork"
-                >
+                        <p class="genre">
+                            ORCHESTRAL
+                        </p>
 
-            </div>
+                        <h3 class="song-title">
+                            ORCHESTRAL SONG ONE
+                        </h3>
 
+                        <!-- CHANGE THIS -->
 
+                        <p>
+                            <strong>Year:</strong> 2026
+                        </p>
 
-            <!-- ============================
-                 RIGHT — SONGS
-            ============================= -->
-
-            <div class="song-list">
-
-
-                <!-- GENRE -->
-
-                <p class="genre">
-                    ORCHESTRAL
-                </p>
+                        <p>
+                            Quick information about this song.
+                        </p>
 
 
+                        <!-- CHANGE THIS -->
 
-                <!-- ============================
-                     SONG 01
-                ============================= -->
-
-                <div class="song">
-
-                    <!-- CHANGE TITLE -->
-
-                    <h3>
-                        ORCHESTRAL SONG ONE
-                    </h3>
-
-
-                    <!-- CHANGE MUSIC FILE -->
-
-                    <audio controls>
-
-                        <source
+                        <audio
+                            controls
                             src="music/orchestral-01.mp3"
-                            type="audio/mpeg"
                         >
+                            Your browser does not support the audio player.
+                        </audio>
 
-                    </audio>
-
-                </div>
+                    </div>
 
 
 
-                <!-- ============================
-                     SONG 02
-                ============================= -->
+                    <!-- SONG 2 -->
 
-                <div class="song">
+                    <div class="song">
 
-                    <h3>
-                        ORCHESTRAL SONG TWO
-                    </h3>
+                        <p class="genre">
+                            ORCHESTRAL
+                        </p>
 
-                    <audio controls>
+                        <!-- CHANGE THIS -->
 
-                        <source
+                        <h3 class="song-title">
+                            ORCHESTRAL SONG TWO
+                        </h3>
+
+                        <p>
+                            <strong>Year:</strong> 2026
+                        </p>
+
+                        <p>
+                            Quick information about this song.
+                        </p>
+
+                        <!-- CHANGE THIS -->
+
+                        <audio
+                            controls
                             src="music/orchestral-02.mp3"
-                            type="audio/mpeg"
                         >
+                            Your browser does not support the audio player.
+                        </audio>
 
-                    </audio>
-
-                </div>
+                    </div>
 
 
 
-                <!-- ============================
-                     SONG 03
-                ============================= -->
+                    <!-- SONG 3 -->
 
-                <div class="song">
+                    <div class="song">
 
-                    <h3>
-                        ORCHESTRAL SONG THREE
-                    </h3>
+                        <p class="genre">
+                            ORCHESTRAL
+                        </p>
 
-                    <audio controls>
+                        <!-- CHANGE THIS -->
 
-                        <source
+                        <h3 class="song-title">
+                            ORCHESTRAL SONG THREE
+                        </h3>
+
+                        <p>
+                            <strong>Year:</strong> 2026
+                        </p>
+
+                        <p>
+                            Quick information about this song.
+                        </p>
+
+                        <!-- CHANGE THIS -->
+
+                        <audio
+                            controls
                             src="music/orchestral-03.mp3"
-                            type="audio/mpeg"
                         >
+                            Your browser does not support the audio player.
+                        </audio>
 
-                    </audio>
-
-                </div>
+                    </div>
 
 
 
-                <!-- ============================
-                     SONG 04
-                ============================= -->
+                    <!-- SONG 4 -->
 
-                <div class="song">
+                    <div class="song">
 
-                    <h3>
-                        ORCHESTRAL SONG FOUR
-                    </h3>
+                        <p class="genre">
+                            ORCHESTRAL
+                        </p>
 
-                    <audio controls>
+                        <!-- CHANGE THIS -->
 
-                        <source
+                        <h3 class="song-title">
+                            ORCHESTRAL SONG FOUR
+                        </h3>
+
+                        <p>
+                            <strong>Year:</strong> 2026
+                        </p>
+
+                        <p>
+                            Quick information about this song.
+                        </p>
+
+                        <!-- CHANGE THIS -->
+
+                        <audio
+                            controls
                             src="music/orchestral-04.mp3"
-                            type="audio/mpeg"
                         >
+                            Your browser does not support the audio player.
+                        </audio>
 
-                    </audio>
+                    </div>
 
                 </div>
 
-
             </div>
 
-        </div>
 
 
+            <!-- ---------- ORCHESTRAL ARTIST STATEMENT ---------- -->
 
-        <!-- ============================
-             QUICK INFORMATION
-        ============================= -->
+            <details class="artist-statement">
 
-        <div class="section-info">
-
-            <p>
-
-                <!-- CHANGE THIS -->
-
-                Write a short description of your
-                orchestral work here.
-
-            </p>
-
-        </div>
-
-
-
-        <!-- ============================
-             ARTIST STATEMENT
-        ============================= -->
-
-        <details class="artist-statement full-width">
-
-            <summary>
-                ARTIST STATEMENT
-            </summary>
-
-
-            <div class="statement-content">
+                <summary>
+                    ARTIST STATEMENT
+                </summary>
 
                 <!-- CHANGE THIS -->
 
                 <p>
-
-                    Write your detailed orchestral
-                    artist statement here.
-
+                    Write the artist statement for the orchestral
+                    collection here.
                 </p>
 
+            </details>
 
-                <p>
-
-                    Add another paragraph if needed.
-
-                </p>
-
-            </div>
-
-        </details>
-
+        </div>
 
     </section>
 
@@ -675,201 +553,224 @@ index.html
 
     <!-- =====================================================
          SECTION 5 — EXPERIMENTAL
-    ====================================================== -->
+    ===================================================== -->
 
-    <section class="section experimental-section">
+    <section class="experimental-section">
 
+        <div class="section-container">
 
-        <!-- SECTION TITLE -->
+            <p class="section-number">05</p>
 
-        <div class="section-heading">
+            <!-- CHANGE THIS -->
 
-            <p class="section-number">
-                05
-            </p>
-
-            <h2>
-                EXPERIMENTS
+            <h2 class="section-title">
+                EXPERIMENTAL
             </h2>
 
-            <p>
-                Experimental works, studies, and musical exploration.
+
+            <!-- CHANGE THIS -->
+
+            <p class="section-intro">
+                Experimental and exploratory musical works.
             </p>
 
-        </div>
+
+
+            <!-- ---------- EXPERIMENTAL COLLECTION ---------- -->
+
+            <div class="collection">
+
+
+                <!-- MAIN ALBUM COVER -->
+
+                <div class="collection-image">
+
+                    <!-- CHANGE THIS -->
+
+                    <img
+                        src="images/experimental-cover.jpg"
+                        alt="Experimental album cover"
+                    >
+
+                </div>
 
 
 
-        <!-- ============================
-             COLLECTION
-        ============================= -->
+                <!-- SONG LIST -->
 
-        <div class="collection">
+                <div class="song-list">
 
 
-            <!-- MAIN COVER -->
+                    <!-- SONG 1 -->
 
-            <div class="collection-cover">
+                    <div class="song">
 
-                <!-- CHANGE IMAGE -->
+                        <p class="genre">
+                            EXPERIMENTAL
+                        </p>
 
-                <img
-                    src="images/experimental-cover.jpg"
-                    alt="Experimental music collection artwork"
-                >
+                        <!-- CHANGE THIS -->
 
-            </div>
+                        <h3 class="song-title">
+                            EXPERIMENTAL SONG ONE
+                        </h3>
 
+                        <p>
+                            <strong>Year:</strong> 2026
+                        </p>
 
+                        <p>
+                            Quick information about this song.
+                        </p>
 
-            <!-- SONG LIST -->
+                        <!-- CHANGE THIS -->
 
-            <div class="song-list">
-
-
-                <p class="genre">
-                    EXPERIMENTAL
-                </p>
-
-
-
-                <!-- SONG 01 -->
-
-                <div class="song">
-
-                    <h3>
-                        EXPERIMENT ONE
-                    </h3>
-
-                    <audio controls>
-
-                        <source
+                        <audio
+                            controls
                             src="music/experimental-01.mp3"
-                            type="audio/mpeg"
                         >
+                            Your browser does not support the audio player.
+                        </audio>
 
-                    </audio>
-
-                </div>
+                    </div>
 
 
 
-                <!-- SONG 02 -->
+                    <!-- SONG 2 -->
 
-                <div class="song">
+                    <div class="song">
 
-                    <h3>
-                        EXPERIMENT TWO
-                    </h3>
+                        <p class="genre">
+                            EXPERIMENTAL
+                        </p>
 
-                    <audio controls>
+                        <!-- CHANGE THIS -->
 
-                        <source
+                        <h3 class="song-title">
+                            EXPERIMENTAL SONG TWO
+                        </h3>
+
+                        <p>
+                            <strong>Year:</strong> 2026
+                        </p>
+
+                        <p>
+                            Quick information about this song.
+                        </p>
+
+                        <!-- CHANGE THIS -->
+
+                        <audio
+                            controls
                             src="music/experimental-02.mp3"
-                            type="audio/mpeg"
                         >
+                            Your browser does not support the audio player.
+                        </audio>
 
-                    </audio>
-
-                </div>
+                    </div>
 
 
 
-                <!-- SONG 03 -->
+                    <!-- SONG 3 -->
 
-                <div class="song">
+                    <div class="song">
 
-                    <h3>
-                        EXPERIMENT THREE
-                    </h3>
+                        <p class="genre">
+                            EXPERIMENTAL
+                        </p>
 
-                    <audio controls>
+                        <!-- CHANGE THIS -->
 
-                        <source
+                        <h3 class="song-title">
+                            EXPERIMENTAL SONG THREE
+                        </h3>
+
+                        <p>
+                            <strong>Year:</strong> 2026
+                        </p>
+
+                        <p>
+                            Quick information about this song.
+                        </p>
+
+                        <!-- CHANGE THIS -->
+
+                        <audio
+                            controls
                             src="music/experimental-03.mp3"
-                            type="audio/mpeg"
                         >
+                            Your browser does not support the audio player.
+                        </audio>
 
-                    </audio>
-
-                </div>
+                    </div>
 
 
 
-                <!-- SONG 04 -->
+                    <!-- SONG 4 -->
 
-                <div class="song">
+                    <div class="song">
 
-                    <h3>
-                        EXPERIMENT FOUR
-                    </h3>
+                        <p class="genre">
+                            EXPERIMENTAL
+                        </p>
 
-                    <audio controls>
+                        <!-- CHANGE THIS -->
 
-                        <source
+                        <h3 class="song-title">
+                            EXPERIMENTAL SONG FOUR
+                        </h3>
+
+                        <p>
+                            <strong>Year:</strong> 2026
+                        </p>
+
+                        <p>
+                            Quick information about this song.
+                        </p>
+
+                        <!-- CHANGE THIS -->
+
+                        <audio
+                            controls
                             src="music/experimental-04.mp3"
-                            type="audio/mpeg"
                         >
+                            Your browser does not support the audio player.
+                        </audio>
 
-                    </audio>
+                    </div>
 
                 </div>
-
 
             </div>
 
-        </div>
 
 
+            <!-- ---------- EXPERIMENTAL ARTIST STATEMENT ---------- -->
 
-        <!-- ============================
-             ARTIST STATEMENT
-        ============================= -->
+            <details class="artist-statement">
 
-        <details class="artist-statement full-width">
-
-            <summary>
-                ARTIST STATEMENT
-            </summary>
-
-
-            <div class="statement-content">
+                <summary>
+                    ARTIST STATEMENT
+                </summary>
 
                 <!-- CHANGE THIS -->
 
                 <p>
-
-                    Write your experimental music
-                    artist statement here.
-
+                    Write the artist statement for the experimental
+                    collection here.
                 </p>
 
+            </details>
 
-                <p>
-
-                    Explain your experiments, techniques,
-                    influences, or ideas.
-
-                </p>
-
-            </div>
-
-        </details>
-
+        </div>
 
     </section>
 
 
 
-    <!-- =====================================================
-         JAVASCRIPT
-         We currently don't need much JavaScript.
-    ====================================================== -->
-
+    <!-- Connects this HTML file to JavaScript -->
     <script src="script.js"></script>
-
 
 </body>
 
 </html>
-```
