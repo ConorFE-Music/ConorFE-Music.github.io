@@ -38,12 +38,13 @@ section {
 }
 
 /* ---------------------------------------------------------
-   ABOUT ME
+   ABOUT ME — spacious opening section
 --------------------------------------------------------- */
 
 .about-section {
     background: #101C36 !important;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 20px);
+    margin: 10px auto;
     display: flex;
     align-items: center;
 }
