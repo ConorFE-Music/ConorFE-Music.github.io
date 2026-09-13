@@ -23,6 +23,8 @@ body {
 
 /* ---------------------------------------------------------
    GENERAL SECTIONS
+   Keep the inside of every music box exactly as before.
+   Only the space BETWEEN boxes is increased.
 --------------------------------------------------------- */
 
 section {
@@ -37,8 +39,6 @@ section {
 
 /* ---------------------------------------------------------
    ABOUT ME
-   This is intentionally much more spacious than the other
-   sections so it feels like its own opening/landing page.
 --------------------------------------------------------- */
 
 .about-section {
@@ -104,9 +104,7 @@ section {
 }
 
 /* ---------------------------------------------------------
-   OTHER SECTION COLOURS
-   The colour is also reinforced with !important so these
-   panels cannot accidentally inherit the navy background.
+   MUSIC SECTION COLOURS
 --------------------------------------------------------- */
 
 .highlight-section {
@@ -252,7 +250,7 @@ audio {
     }
 
     .about-section {
-        min-height: calc(100vh - 16px);
+        min-height: calc(100vh - 40px);
     }
 
     .about-container,
