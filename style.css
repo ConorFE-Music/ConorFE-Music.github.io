@@ -1,37 +1,47 @@
 /* =========================================================
    MUSIC PORTFOLIO
-   COMPACT CONTAINED PANEL DESIGN
+   COMPACT + CONTAINED COLOUR PANELS
 
-   EDIT THESE VARIABLES TO CHANGE:
-   - Colours
-   - Text sizes
-   - Panel spacing
-   - Panel width
-   - Borders
+   The entire page is NAVY.
+   Each section is its own contained colour panel.
+
+   EASY COLOUR EDITING:
+   Change the five background colours at the top.
+========================================================= */
+
+
+/* =========================================================
+   COLOURS + MAIN SETTINGS
 ========================================================= */
 
 :root {
-    /* OVERALL PAGE */
+
+    /* OVERALL PAGE BACKGROUND */
     --site-background: #101C36;
     --site-text: #FFFFFF;
 
-    /* ABOUT ME — DARK TEAL */
+
+    /* 01 — ABOUT ME: DARK TEAL */
     --about-background: #164A4A;
     --about-text: #FFFFFF;
 
-    /* HIGHLIGHT — BRIGHTER DARK BLUE */
+
+    /* 02 — HIGHLIGHT: BRIGHTER DARK BLUE */
     --highlight-background: #173E70;
     --highlight-text: #FFFFFF;
 
-    /* PROFESSIONAL PROJECT — DARK PINKISH PURPLE */
+
+    /* 03 — PROFESSIONAL PROJECT: DARK PINKISH PURPLE */
     --professional-background: #542A50;
     --professional-text: #FFFFFF;
 
-    /* ORCHESTRAL — DARK RED */
+
+    /* 04 — ORCHESTRAL: DARK RED */
     --orchestral-background: #5A2025;
     --orchestral-text: #FFFFFF;
 
-    /* EXPERIMENTAL — DARK GREEN */
+
+    /* 05 — EXPERIMENTAL: DARK GREEN */
     --experimental-background: #234D3C;
     --experimental-text: #FFFFFF;
 
@@ -48,14 +58,20 @@
     --song-title-size: 20px;
 
 
-    /* PANEL SIZE + SPACING */
+    /* LAYOUT */
     --content-width: 1100px;
     --panel-width: 1200px;
 
+    /* Space inside coloured panels */
     --section-padding: 38px;
+
+    /* Space between coloured panels */
     --section-gap: 10px;
+
+    /* Space between columns */
     --column-gap: 35px;
 
+    /* Borders */
     --border-width: 1px;
     --panel-radius: 4px;
 }
@@ -76,8 +92,12 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background: var(--site-background);
-    color: var(--site-text);
+
+    /* NAVY BACKGROUND AROUND THE PANELS */
+    background: #101C36;
+
+    color: #FFFFFF;
+
     font-family: var(--body-font);
     font-size: var(--body-size);
     line-height: 1.4;
@@ -85,7 +105,7 @@ body {
 
 
 /* =========================================================
-   CONTAINED COLOUR PANELS
+   ALL COLOURED PANELS
 ========================================================= */
 
 section {
@@ -93,6 +113,7 @@ section {
     max-width: var(--panel-width);
 
     margin: var(--section-gap) auto;
+
     padding: var(--section-padding);
 
     min-height: auto;
@@ -109,51 +130,62 @@ section {
 .section-container {
     width: 100%;
     max-width: var(--content-width);
+
     margin: 0 auto;
 }
 
 .section-number {
     margin: 0 0 4px 0;
+
     font-family: var(--heading-font);
-    font-weight: bold;
     font-size: 13px;
+    font-weight: bold;
+
     letter-spacing: 2px;
 }
 
 .section-title {
     width: 100%;
+
     margin: 0 auto 10px auto;
+
     font-family: var(--heading-font);
     font-size: var(--section-title-size);
+
     line-height: 1;
+
     text-align: center;
 }
 
 .section-intro {
     max-width: 650px;
+
     margin: 0 auto 20px auto;
+
     text-align: center;
 }
 
 
 /* =========================================================
-   ABOUT ME — DARK TEAL
+   01 — ABOUT ME
 ========================================================= */
 
 .about-section {
-    background: var(--about-background);
-    color: var(--about-text);
+    background: #164A4A !important;
+    color: #FFFFFF;
 }
 
 .about-container {
     width: 100%;
     max-width: var(--content-width);
+
     margin: 0 auto;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     gap: var(--column-gap);
+
     align-items: center;
 }
 
@@ -164,22 +196,27 @@ section {
 .about-image img {
     width: 100%;
     max-width: 400px;
+
     height: auto;
+
     display: block;
     margin: 0 auto;
 
-    border: var(--border-width) solid currentColor;
+    border: var(--border-width) solid #FFFFFF;
 }
 
 .about-info h1 {
     margin: 0 0 5px 0;
+
     font-family: var(--heading-font);
     font-size: var(--heading-size);
+
     line-height: 0.95;
 }
 
 .about-info h2 {
     margin: 0 0 14px 0;
+
     font-family: var(--heading-font);
     font-size: 17px;
     font-weight: normal;
@@ -187,16 +224,19 @@ section {
 
 .bio {
     max-width: 600px;
+
     margin-bottom: 18px;
 }
 
 .contact-button {
     display: inline-block;
+
     padding: 8px 18px;
 
-    border: var(--border-width) solid currentColor;
+    border: var(--border-width) solid #FFFFFF;
 
-    color: var(--about-text);
+    color: #FFFFFF;
+
     text-decoration: none;
 
     font-size: 14px;
@@ -206,33 +246,33 @@ section {
 }
 
 .contact-button:hover {
-    background: var(--about-text);
-    color: var(--about-background);
+    background: #FFFFFF;
+    color: #164A4A;
 }
 
 
 /* =========================================================
-   HIGHLIGHT — DARK BLUE
+   02 — HIGHLIGHT
 ========================================================= */
 
 .highlight-section {
-    background: var(--highlight-background);
-    color: var(--highlight-text);
+    background: #173E70 !important;
+    color: #FFFFFF;
 }
 
 
 /* =========================================================
-   PROFESSIONAL PROJECT — DARK PINKISH PURPLE
+   03 — PROFESSIONAL PROJECT
 ========================================================= */
 
 .professional-section {
-    background: var(--professional-background);
-    color: var(--professional-text);
+    background: #542A50 !important;
+    color: #FFFFFF;
 }
 
 
 /* =========================================================
-   FEATURED WORK
+   HIGHLIGHT + PROFESSIONAL PROJECT
 ========================================================= */
 
 .featured-work {
@@ -245,6 +285,7 @@ section {
     grid-template-columns: 1fr 1fr;
 
     gap: var(--column-gap);
+
     align-items: center;
 }
 
@@ -255,7 +296,9 @@ section {
 .work-image img {
     width: 100%;
     max-width: 400px;
+
     height: auto;
+
     display: block;
     margin: 0 auto;
 
@@ -268,15 +311,19 @@ section {
 
 .genre {
     margin: 0 0 5px 0;
+
     font-size: 12px;
     font-weight: bold;
+
     letter-spacing: 2px;
 }
 
 .song-title {
     margin: 0 0 8px 0;
+
     font-family: var(--heading-font);
     font-size: var(--song-title-size);
+
     line-height: 1.1;
 }
 
@@ -292,11 +339,12 @@ audio {
 
 
 /* =========================================================
-   ARTIST STATEMENT DROPDOWN
+   ARTIST STATEMENT
 ========================================================= */
 
 .artist-statement {
     width: 100%;
+
     margin-top: 20px;
 
     border-top: var(--border-width) solid currentColor;
@@ -305,12 +353,14 @@ audio {
 
 .artist-statement summary {
     cursor: pointer;
+
     padding: 9px 0;
 
     text-align: right;
 
     font-size: 13px;
     font-weight: bold;
+
     letter-spacing: 1px;
 
     list-style: none;
@@ -330,33 +380,35 @@ audio {
 
 .artist-statement p {
     max-width: 650px;
+
     margin: 0 0 15px auto;
+
     line-height: 1.5;
 }
 
 
 /* =========================================================
-   ORCHESTRAL — DARK RED
+   04 — ORCHESTRAL
 ========================================================= */
 
 .orchestral-section {
-    background: var(--orchestral-background);
-    color: var(--orchestral-text);
+    background: #5A2025 !important;
+    color: #FFFFFF;
 }
 
 
 /* =========================================================
-   EXPERIMENTAL — DARK GREEN
+   05 — EXPERIMENTAL
 ========================================================= */
 
 .experimental-section {
-    background: var(--experimental-background);
-    color: var(--experimental-text);
+    background: #234D3C !important;
+    color: #FFFFFF;
 }
 
 
 /* =========================================================
-   ORCHESTRAL + EXPERIMENTAL
+   ORCHESTRAL + EXPERIMENTAL COLLECTIONS
 ========================================================= */
 
 .collection {
@@ -369,6 +421,7 @@ audio {
     grid-template-columns: 38% 1fr;
 
     gap: var(--column-gap);
+
     align-items: start;
 }
 
@@ -379,7 +432,9 @@ audio {
 .collection-image img {
     width: 100%;
     max-width: 380px;
+
     height: auto;
+
     display: block;
     margin: 0 auto;
 
@@ -392,11 +447,13 @@ audio {
 
 .collection-year {
     margin: 3px 0 5px 0;
+
     font-size: 14px;
 }
 
 .collection-info {
     margin: 0 0 12px 0;
+
     max-width: 600px;
 }
 
@@ -407,6 +464,7 @@ audio {
 
 .song {
     padding: 8px 0 12px 0;
+
     margin-bottom: 8px;
 
     border-bottom: var(--border-width) solid currentColor;
@@ -414,6 +472,7 @@ audio {
 
 .song .song-title {
     margin: 0 0 5px 0;
+
     font-size: 18px;
 }
 
@@ -434,12 +493,15 @@ audio {
 
     section {
         width: calc(100% - 20px);
+
         margin: 7px auto;
+
         padding: 30px 20px;
     }
 
     .about-container {
         grid-template-columns: 1fr;
+
         gap: 25px;
     }
 
@@ -449,11 +511,13 @@ audio {
 
     .featured-work {
         grid-template-columns: 1fr;
+
         gap: 25px;
     }
 
     .collection {
         grid-template-columns: 1fr;
+
         gap: 25px;
     }
 
