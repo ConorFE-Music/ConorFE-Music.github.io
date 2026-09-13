@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Orbitron:wght@400;500;600;700&family=Rubik+80s+Fade&family=Share+Tech&display=swap');
 
 /* =========================================================
    MUSIC PORTFOLIO
@@ -18,9 +18,33 @@ body {
     padding: 0;
     background: #101C36;
     color: #FFFFFF;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Share Tech', sans-serif;
     font-size: 15px;
     line-height: 1.5;
+}
+
+/* ---------------------------------------------------------
+   GOOGLE FONT ASSIGNMENTS
+--------------------------------------------------------- */
+
+.about-info h1 {
+    font-family: 'Nabla', sans-serif;
+}
+
+.section-title {
+    font-family: 'Rubik 80s Fade', sans-serif;
+}
+
+.about-info h2,
+.song-title,
+.artist-statement summary,
+.section-number,
+.genre {
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    font-family: 'Share Tech', sans-serif;
 }
 
 /* ---------------------------------------------------------
