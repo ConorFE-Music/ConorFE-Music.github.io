@@ -1,7 +1,6 @@
 /* =========================================================
-   MUSIC PORTFOLIO — COMPACT VERSION
-   Section colours are also written directly into index.html
-   so they cannot be overridden by another CSS rule.
+   MUSIC PORTFOLIO
+   Compact portfolio sections, with a spacious About page
 ========================================================= */
 
 * {
@@ -22,19 +21,93 @@ body {
     line-height: 1.5;
 }
 
+/* ---------------------------------------------------------
+   GENERAL SECTIONS
+--------------------------------------------------------- */
+
 section {
     width: calc(100% - 30px);
     max-width: 1200px;
-    margin: 10px auto;
+    margin: 30px auto;
     padding: 38px;
     border: 1px solid rgba(255,255,255,0.18);
     border-radius: 4px;
     color: #FFFFFF;
 }
 
+/* ---------------------------------------------------------
+   ABOUT ME
+   This is intentionally much more spacious than the other
+   sections so it feels like its own opening/landing page.
+--------------------------------------------------------- */
+
 .about-section {
-    background: #164A4A !important;
+    background: #101C36 !important;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
 }
+
+.about-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.about-image img {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.about-info {
+    max-width: 650px;
+}
+
+.about-info h1 {
+    margin: 0 0 8px;
+    font-size: 48px;
+    line-height: 1;
+}
+
+.about-info h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.section-number {
+    margin: 0 0 8px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    font-weight: bold;
+}
+
+.bio {
+    margin: 0 0 24px;
+}
+
+.contact-button {
+    display: inline-block;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 8px 14px;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+}
+
+/* ---------------------------------------------------------
+   OTHER SECTION COLOURS
+   The colour is also reinforced with !important so these
+   panels cannot accidentally inherit the navy background.
+--------------------------------------------------------- */
 
 .highlight-section {
     background: #173E70 !important;
@@ -52,63 +125,9 @@ section {
     background: #234D3C !important;
 }
 
-.about-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 38px;
-    align-items: center;
-}
-
-.about-image img,
-.work-image img,
-.collection-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.about-image img {
-    max-width: 250px;
-    aspect-ratio: 1 / 1;
-}
-
-h1 {
-    margin: 0 0 6px;
-    font-size: 48px;
-    line-height: 1;
-}
-
-.about-info h2 {
-    margin: 0 0 18px;
-    font-size: 20px;
-    font-weight: normal;
-}
-
-.section-number,
-.genre {
-    margin: 0 0 8px;
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    font-weight: bold;
-}
-
-.bio {
-    max-width: 650px;
-    margin: 0 0 20px;
-}
-
-.contact-button {
-    display: inline-block;
-    color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    padding: 8px 14px;
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 0.08em;
-}
+/* ---------------------------------------------------------
+   SECTION CONTENT
+--------------------------------------------------------- */
 
 .section-container {
     max-width: 1100px;
@@ -122,22 +141,34 @@ h1 {
 }
 
 .section-intro {
-    margin: 0 0 24px;
+    margin: 0 0 28px;
 }
 
 .featured-work {
     display: grid;
-    grid-template-columns: minmax(180px, 300px) 1fr;
-    gap: 30px;
+    grid-template-columns: minmax(200px, 320px) 1fr;
+    gap: 35px;
     align-items: start;
 }
 
-.work-image img {
+.work-image img,
+.collection-image img {
+    display: block;
+    width: 100%;
     aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
-.work-info {
+.work-info,
+.song-list {
     min-width: 0;
+}
+
+.genre {
+    margin: 0 0 8px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    font-weight: bold;
 }
 
 .song-title {
@@ -156,8 +187,12 @@ audio {
     margin-top: 12px;
 }
 
+/* ---------------------------------------------------------
+   ARTIST STATEMENT
+--------------------------------------------------------- */
+
 .artist-statement {
-    margin-top: 25px;
+    margin-top: 28px;
     border-top: 1px solid rgba(255,255,255,0.35);
     padding-top: 14px;
 }
@@ -174,19 +209,15 @@ audio {
     margin-bottom: 0;
 }
 
+/* ---------------------------------------------------------
+   COLLECTIONS
+--------------------------------------------------------- */
+
 .collection {
     display: grid;
-    grid-template-columns: minmax(180px, 300px) 1fr;
-    gap: 30px;
+    grid-template-columns: minmax(200px, 320px) 1fr;
+    gap: 35px;
     align-items: start;
-}
-
-.collection-image img {
-    aspect-ratio: 1 / 1;
-}
-
-.song-list {
-    min-width: 0;
 }
 
 .collection-year,
@@ -195,7 +226,7 @@ audio {
 }
 
 .song {
-    padding: 15px 0;
+    padding: 16px 0;
     border-top: 1px solid rgba(255,255,255,0.25);
 }
 
@@ -208,24 +239,34 @@ audio {
     margin-top: 0;
 }
 
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
 @media (max-width: 700px) {
+
     section {
         width: calc(100% - 16px);
-        padding: 24px;
+        padding: 26px;
+        margin: 20px auto;
+    }
+
+    .about-section {
+        min-height: calc(100vh - 16px);
     }
 
     .about-container,
     .featured-work,
     .collection {
         grid-template-columns: 1fr;
-        gap: 22px;
+        gap: 25px;
     }
 
     .about-image img {
-        max-width: 200px;
+        max-width: 220px;
     }
 
-    h1 {
+    .about-info h1 {
         font-size: 38px;
     }
 
