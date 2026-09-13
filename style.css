@@ -16,7 +16,7 @@ body {
     padding: 0;
     background: #101C36;
     color: #FFFFFF;
-    font-family: monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 15px;
     line-height: 1.5;
 }
