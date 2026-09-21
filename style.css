@@ -458,3 +458,20 @@ audio {
         font-size: 28px;
     }
 }
+/* =====================================================
+   LINKS + ALBUM COVER CREDITS
+   ===================================================== */
+
+.artist-statement a {
+    color: #BFDFFF;
+}
+
+.cover-credit {
+    margin: 6px 0 0;
+
+    font-size: 11px;
+
+    opacity: 0.7;
+
+    text-align: left;
+}
